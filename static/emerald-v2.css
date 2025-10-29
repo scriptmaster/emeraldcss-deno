@@ -38,7 +38,8 @@ button { border-radius: 0; }
     --color-light: #f6f8fa;
     --color-white: #ffffff;
 
-    --color-bg: var(--color-light);
+    --color-bg: var(--color-white);
+    --color-bg-alt: var(--color-light);
     --color: var(--color-dark);
 
     --color-stickynote: #fef3c7;
@@ -74,6 +75,9 @@ button { border-radius: 0; }
     --color-border-3: var(--color-300);
     --color-border-form: var(--color-primary);
     --color-border-form-focus: var(--color-primary);
+    
+    --opacity-form: 0.8;
+    --opacity-disabled: 0.65;
 
     /* Typography */
     --font-sans: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
@@ -884,7 +888,7 @@ ul.dropdown {
 
 .btn:disabled {
     pointer-events: none;
-    opacity: 0.65;
+    opacity: var(--opacity-disabled);
 }
 
 .btn + .btn { margin-left: var(--btn-padding-x); }
@@ -958,7 +962,7 @@ ul.dropdown {
     border: 1px solid var(--color-border-form);
     border-radius: var(--border-radius);
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    opacity: 0.9;
+    opacity: var(--opacity-form);
 }
 
 .form-control:focus, input:focus, select:focus, textarea:focus {
@@ -976,7 +980,7 @@ ul.dropdown {
 
 .form-control:disabled {
     background-color: var(--color-muted);
-    opacity: 0.8;
+    opacity: var(--opacity-disabled);
 }
 
 .form-select {
@@ -996,7 +1000,7 @@ ul.dropdown {
     border-radius: var(--border-radius);
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     appearance: none;
-    opacity: 0.9;
+    opacity: var(--opacity-form);
 }
 
 .form-select:focus {
@@ -1008,7 +1012,7 @@ ul.dropdown {
 
 .form-select:disabled {
     background-color: var(--color-muted);
-    opacity: 0.8;
+    opacity: var(--opacity-disabled);
 }
 
 label { margin-right: var(--rem-2); }
