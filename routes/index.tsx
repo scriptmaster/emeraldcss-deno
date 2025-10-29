@@ -822,37 +822,39 @@ export default define.page(function Home(ctx: any) {
         <h3>Form Elements Comparison</h3>
         <div class="card">
           <h4>Without Form Classes (Default Browser Styling)</h4>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="mb-3">
-                <label>Default Input</label>
-                <input type="text" placeholder="Default input styling" />
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label>Default Input</label>
+                  <input type="text" placeholder="Default input styling" />
+                </div>
+                <div class="mb-3">
+                  <label>Default Textarea</label>
+                  <textarea placeholder="Default textarea styling"></textarea>
+                </div>
+                <div class="mb-3">
+                  <label>Default Select</label>
+                  <select>
+                    <option>Default option 1</option>
+                    <option>Default option 2</option>
+                  </select>
+                </div>
               </div>
-              <div class="mb-3">
-                <label>Default Textarea</label>
-                <textarea placeholder="Default textarea styling"></textarea>
-              </div>
-              <div class="mb-3">
-                <label>Default Select</label>
-                <select>
-                  <option>Default option 1</option>
-                  <option>Default option 2</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="mb-3">
-                <label>Default Checkbox</label>
-                <input type="checkbox" /> Checkbox option
-              </div>
-              <div class="mb-3">
-                <label>Default Radio</label>
-                <input type="radio" name="radio1" /> Radio option 1<br />
-                <input type="radio" name="radio1" /> Radio option 2
-              </div>
-              <div class="mb-3">
-                <label>Default Button</label>
-                <button>Default Button</button>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label>Default Checkbox</label>
+                  <input type="checkbox" /> Checkbox option
+                </div>
+                <div class="mb-3">
+                  <label>Default Radio</label>
+                  <input type="radio" name="radio1" /> Radio option 1<br />
+                  <input type="radio" name="radio1" /> Radio option 2
+                </div>
+                <div class="mb-3">
+                  <label>Default Button</label>
+                  <button>Default Button</button>
+                </div>
               </div>
             </div>
           </div>
@@ -860,57 +862,59 @@ export default define.page(function Home(ctx: any) {
         
         <h4>With Form Classes (EmeraldCSS Styling)</h4>
         <div class="card">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="mb-3">
-                <label class="form-label">Form Label</label>
-                <input type="text" class="form-control" placeholder="Styled input with form-control" />
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Textarea</label>
-                <textarea class="form-control" placeholder="Styled textarea with form-control" rows="3"></textarea>
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Select</label>
-                <select class="form-select">
-                  <option>Styled option 1</option>
-                  <option>Styled option 2</option>
-                  <option>Styled option 3</option>
-                </select>
-              </div>
-              <div class="mb-3">
-                <label class="form-label">File Input</label>
-                <input type="file" class="form-control" />
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="mb-3">
-                <label class="form-label">Checkboxes</label>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="check1" />
-                  <label class="form-check-label" for="check1">Checkbox option 1</label>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label class="form-label">Form Label</label>
+                  <input type="text" class="form-control" placeholder="Styled input with form-control" />
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="check2" />
-                  <label class="form-check-label" for="check2">Checkbox option 2</label>
+                <div class="mb-3">
+                  <label class="form-label">Textarea</label>
+                  <textarea class="form-control" placeholder="Styled textarea with form-control" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Select</label>
+                  <select class="form-select">
+                    <option>Styled option 1</option>
+                    <option>Styled option 2</option>
+                    <option>Styled option 3</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">File Input</label>
+                  <input type="file" class="form-control" />
                 </div>
               </div>
-              <div class="mb-3">
-                <label class="form-label">Radio Buttons</label>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="radio2" id="radio1" />
-                  <label class="form-check-label" for="radio1">Radio option 1</label>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label class="form-label">Checkboxes</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="check1" />
+                    <label class="form-check-label" for="check1">Checkbox option 1</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="check2" />
+                    <label class="form-check-label" for="check2">Checkbox option 2</label>
+                  </div>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="radio2" id="radio2" />
-                  <label class="form-check-label" for="radio2">Radio option 2</label>
+                <div class="mb-3">
+                  <label class="form-label">Radio Buttons</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radio2" id="radio1" />
+                    <label class="form-check-label" for="radio1">Radio option 1</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radio2" id="radio2" />
+                    <label class="form-check-label" for="radio2">Radio option 2</label>
+                  </div>
                 </div>
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Switch</label>
-                <div class="form-check form-switch">
-                  <input class="form-check-input" type="checkbox" id="switch1" />
-                  <label class="form-check-label" for="switch1">Toggle switch</label>
+                <div class="mb-3">
+                  <label class="form-label">Switch</label>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="switch1" />
+                    <label class="form-check-label" for="switch1">Toggle switch</label>
+                  </div>
                 </div>
               </div>
             </div>
@@ -962,30 +966,32 @@ export default define.page(function Home(ctx: any) {
         <h3>Form Layout Examples</h3>
         <div class="card">
           <h4>Horizontal Form</h4>
-          <div class="row mb-3">
-            <label class="col-sm-2 col-form-label">Email</label>
-            <div class="col-sm-10">
-              <input type="email" class="form-control" placeholder="Enter email" />
-            </div>
-          </div>
-          <div class="row mb-3">
-            <label class="col-sm-2 col-form-label">Password</label>
-            <div class="col-sm-10">
-              <input type="password" class="form-control" placeholder="Enter password" />
-            </div>
-          </div>
-          <div class="row mb-3">
-            <div class="col-sm-10 offset-sm-2">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="remember" />
-                <label class="form-check-label" for="remember">Remember me</label>
+          <div class="container">
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label">Email</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" placeholder="Enter email" />
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-10 offset-sm-2">
-              <button type="submit" class="btn btn-primary">Submit</button>
-              <button type="button" class="btn btn-secondary">Cancel</button>
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label">Password</label>
+              <div class="col-sm-10">
+                <input type="password" class="form-control" placeholder="Enter password" />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-sm-10 offset-sm-2">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="remember" />
+                  <label class="form-check-label" for="remember">Remember me</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-10 offset-sm-2">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-secondary">Cancel</button>
+              </div>
             </div>
           </div>
         </div>
