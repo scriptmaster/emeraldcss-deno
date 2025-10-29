@@ -31,7 +31,7 @@ button { border-radius: 0; }
     --color-danger: #cf222e;
     --color-warning: #9a6700;
     --color-info: #17a2b8;
-    --color-muted: #616876;
+    --color-muted: var(--color-gray-500);
 
     --color-azure: #4299e1;
     --color-dark: #1f2328;
@@ -75,6 +75,7 @@ button { border-radius: 0; }
     --color-border-3: var(--color-300);
     --color-border-form: var(--color-primary);
     --color-border-form-focus: var(--color-primary);
+    --color-border-form-disabled: var(--color-primary);
     
     --opacity-form: 0.8;
     --opacity-disabled: 0.65;
@@ -936,7 +937,7 @@ ul.dropdown {
 .btn-lg { padding: var(--rem-2) var(--rem-4); font-size: var(--font-size-lg); border-radius: var(--radius-lg); }
 
 /* Button States */
-.btn:disabled, .btn.disabled { pointer-events: none; opacity: 0.65; }
+.btn:disabled, .btn.disabled { pointer-events: none; opacity: var(--opacity-disabled); }
 .btn.active { box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
 
 .btn .icon {
@@ -979,7 +980,7 @@ ul.dropdown {
 }
 
 .form-control:disabled {
-    background-color: var(--color-muted);
+    border-color: var(--color-border-form-disabled);
     opacity: var(--opacity-disabled);
 }
 
@@ -1011,7 +1012,7 @@ ul.dropdown {
 }
 
 .form-select:disabled {
-    background-color: var(--color-muted);
+    border-color: var(--color-border-form-disabled);
     opacity: var(--opacity-disabled);
 }
 
