@@ -39,7 +39,7 @@ button { border-radius: 0; }
     --color-white: #ffffff;
 
     --color-stickynote: #fef3c7;
-    
+
     /* Default Blue Palette (Material Design) */
     --color-50: #e3f2fd;
     --color-100: #bbdefb;
@@ -56,9 +56,18 @@ button { border-radius: 0; }
     --color-A400: #2979ff;
     --color-A700: #2962ff;
 
-    --color-border: var(--color-50);
-    --color-border-1: var(--color-100);
-    --color-border-2: var(--color-200);
+    --color-gray-100: #f3f4f6;
+    --color-gray-200: #e5e7eb;
+    --color-gray-300: #d1d5db;
+    --color-gray-400: #9ca3af;
+    --color-gray-500: #6b7280;
+    --color-gray-600: #4b5563;
+
+    --color-gray: var(--color-gray-300);
+
+    --color-border: var(--color-100);
+    --color-border-1: var(--color-gray-200);
+    --color-border-2: var(--color-gray-300);
     --color-border-3: var(--color-300);
 
     /* Typography */
@@ -72,7 +81,7 @@ button { border-radius: 0; }
     --font-size-2xl: 1.5rem;
     --font-size-3xl: 1.875rem;
     --font-size-4xl: 2.25rem;
-    
+
     --font-size-h1: 1.5rem;
     --font-size-h2: 1.25rem;
     --font-size-h3: 1rem;
@@ -83,8 +92,6 @@ button { border-radius: 0; }
     --navbar-brand-font-size: 1rem;
     --nav-link-font-size: 0.875rem;
 
-    --body-bg: #f1f5f9;
-    --body-bg-rgb: 241, 245, 249;
     --scrollbar-color: var(--brand-color);
 
     /* Fonts */
