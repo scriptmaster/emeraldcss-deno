@@ -955,7 +955,7 @@ ul.dropdown {
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.form-control:focus {
+.form-control:focus, input:focus, select:focus, textarea:focus {
     color: var(--color-dark);
     background-color: var(--color-white);
     border-color: var(--color-primary);
