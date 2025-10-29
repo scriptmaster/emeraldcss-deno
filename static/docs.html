@@ -932,6 +932,224 @@
                 </div>
             </div>
 
+            <!-- Form Demo -->
+            <div class="card">
+                <h2 class="title">Form Controls</h2>
+                <p>EmeraldCSS v2 provides comprehensive form styling with utility classes for all form elements.</p>
+                
+                <h3>Form Elements Comparison</h3>
+                <div class="card">
+                    <h4>Without Form Classes (Default Browser Styling)</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label>Default Input</label>
+                                <input type="text" placeholder="Default input styling" />
+                            </div>
+                            <div class="mb-3">
+                                <label>Default Textarea</label>
+                                <textarea placeholder="Default textarea styling"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label>Default Select</label>
+                                <select>
+                                    <option>Default option 1</option>
+                                    <option>Default option 2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label>Default Checkbox</label>
+                                <input type="checkbox" /> Checkbox option
+                            </div>
+                            <div class="mb-3">
+                                <label>Default Radio</label>
+                                <input type="radio" name="radio1" /> Radio option 1<br />
+                                <input type="radio" name="radio1" /> Radio option 2
+                            </div>
+                            <div class="mb-3">
+                                <label>Default Button</label>
+                                <button>Default Button</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h4>With Form Classes (EmeraldCSS Styling)</h4>
+                <div class="card">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Form Label</label>
+                                <input type="text" class="form-control" placeholder="Styled input with form-control" />
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Textarea</label>
+                                <textarea class="form-control" placeholder="Styled textarea with form-control" rows="3"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Select</label>
+                                <select class="form-select">
+                                    <option>Styled option 1</option>
+                                    <option>Styled option 2</option>
+                                    <option>Styled option 3</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">File Input</label>
+                                <input type="file" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Checkboxes</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="check1" />
+                                    <label class="form-check-label" for="check1">Checkbox option 1</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="check2" />
+                                    <label class="form-check-label" for="check2">Checkbox option 2</label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Radio Buttons</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radio2" id="radio1" />
+                                    <label class="form-check-label" for="radio1">Radio option 1</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radio2" id="radio2" />
+                                    <label class="form-check-label" for="radio2">Radio option 2</label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Switch</label>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="switch1" />
+                                    <label class="form-check-label" for="switch1">Toggle switch</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3>Button Styles</h3>
+                <div class="card">
+                    <h4>Button Variants</h4>
+                    <div class="mb-3">
+                        <button class="btn btn-primary">Primary</button>
+                        <button class="btn btn-secondary">Secondary</button>
+                        <button class="btn btn-success">Success</button>
+                        <button class="btn btn-danger">Danger</button>
+                        <button class="btn btn-warning">Warning</button>
+                        <button class="btn btn-info">Info</button>
+                        <button class="btn btn-light">Light</button>
+                        <button class="btn btn-dark">Dark</button>
+                        <button class="btn btn-link">Link</button>
+                    </div>
+                    
+                    <h4>Button Outlines</h4>
+                    <div class="mb-3">
+                        <button class="btn btn-outline-primary">Primary Outline</button>
+                        <button class="btn btn-outline-secondary">Secondary Outline</button>
+                        <button class="btn btn-outline-success">Success Outline</button>
+                        <button class="btn btn-outline-danger">Danger Outline</button>
+                        <button class="btn btn-outline-warning">Warning Outline</button>
+                        <button class="btn btn-outline-info">Info Outline</button>
+                        <button class="btn btn-outline-light">Light Outline</button>
+                        <button class="btn btn-outline-dark">Dark Outline</button>
+                    </div>
+                    
+                    <h4>Button Sizes</h4>
+                    <div class="mb-3">
+                        <button class="btn btn-primary btn-sm">Small Button</button>
+                        <button class="btn btn-primary">Normal Button</button>
+                        <button class="btn btn-primary btn-lg">Large Button</button>
+                    </div>
+                    
+                    <h4>Button States</h4>
+                    <div class="mb-3">
+                        <button class="btn btn-primary">Normal</button>
+                        <button class="btn btn-primary" disabled>Disabled</button>
+                        <button class="btn btn-primary active">Active</button>
+                    </div>
+                </div>
+                
+                <h3>Form Layout Examples</h3>
+                <div class="card">
+                    <h4>Horizontal Form</h4>
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" placeholder="Enter email" />
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label">Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" placeholder="Enter password" />
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-10 offset-sm-2">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="remember" />
+                                <label class="form-check-label" for="remember">Remember me</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10 offset-sm-2">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="button" class="btn btn-secondary">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h4>Form Validation States</h4>
+                    <div class="mb-3">
+                        <label class="form-label">Valid Input</label>
+                        <input type="text" class="form-control is-valid" value="Valid input" />
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Invalid Input</label>
+                        <input type="text" class="form-control is-invalid" value="Invalid input" />
+                        <div class="invalid-feedback">Please provide a valid input.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Select with Validation</label>
+                        <select class="form-select is-invalid">
+                            <option>Choose...</option>
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                        </select>
+                        <div class="invalid-feedback">Please select a valid option.</div>
+                    </div>
+                </div>
+                
+                <h3>Form Utility Classes</h3>
+                <div class="card">
+                    <ul>
+                        <li><code>.form-control</code> - Styles text inputs, textareas, and select elements</li>
+                        <li><code>.form-select</code> - Styles select dropdowns</li>
+                        <li><code>.form-check</code> - Container for checkboxes and radio buttons</li>
+                        <li><code>.form-check-input</code> - Styles checkbox and radio inputs</li>
+                        <li><code>.form-check-label</code> - Styles labels for checkboxes and radios</li>
+                        <li><code>.form-switch</code> - Creates toggle switch appearance</li>
+                        <li><code>.form-label</code> - Styles form labels</li>
+                        <li><code>.col-form-label</code> - Styles labels in horizontal forms</li>
+                        <li><code>.is-valid</code> - Applies valid state styling</li>
+                        <li><code>.is-invalid</code> - Applies invalid state styling</li>
+                        <li><code>.valid-feedback</code> - Styles success messages</li>
+                        <li><code>.invalid-feedback</code> - Styles error messages</li>
+                    </ul>
+                </div>
+            </div>
+
             <!-- Navigation Demo -->
             <div class="card">
                 <h2 class="title">Navigation</h2>

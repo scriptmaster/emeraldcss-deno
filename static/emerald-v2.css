@@ -987,7 +987,7 @@ ul.dropdown {
     opacity: 1;
 }
 
-label { float: left; }
+label { margin-right: var(--rem-2); }
 .form-label {
     margin-bottom: var(--rem-1);
     font-weight: var(--font-weight-medium);
