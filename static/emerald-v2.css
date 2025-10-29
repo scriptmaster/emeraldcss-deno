@@ -38,7 +38,6 @@ button { border-radius: 0; }
     --color-light: #f6f8fa;
     --color-white: #ffffff;
 
-    --color-border-1: #e1e4e8;
     --color-stickynote: #fef3c7;
     
     /* Default Blue Palette (Material Design) */
@@ -56,6 +55,8 @@ button { border-radius: 0; }
     --color-A200: #448aff;
     --color-A400: #2979ff;
     --color-A700: #2962ff;
+
+    --color-border-1: var(--color-100);
 
     /* Typography */
     --font-sans: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
@@ -870,49 +871,51 @@ ul.dropdown {
     opacity: 0.65;
 }
 
-.btn-primary {
-    color: var(--color-white);
-    background-color: var(--color-primary);
-    border-color: var(--color-primary);
-}
+/* Button Variants */
+.btn-primary { color: var(--color-white); background-color: var(--color-primary); border-color: var(--color-primary); }
+.btn-primary:hover { background-color: var(--color-700); border-color: var(--color-700); }
+.btn-secondary { color: var(--color-white); background-color: var(--color-secondary); border-color: var(--color-secondary); }
+.btn-secondary:hover { background-color: var(--color-600); border-color: var(--color-600); }
+.btn-success { color: var(--color-white); background-color: var(--color-success); border-color: var(--color-success); }
+.btn-success:hover { background-color: #1a6b2f; border-color: #1a6b2f; }
+.btn-danger { color: var(--color-white); background-color: var(--color-danger); border-color: var(--color-danger); }
+.btn-danger:hover { background-color: #b91c1c; border-color: #b91c1c; }
+.btn-warning { color: var(--color-dark); background-color: var(--color-warning); border-color: var(--color-warning); }
+.btn-warning:hover { background-color: #b45309; border-color: #b45309; }
+.btn-info { color: var(--color-white); background-color: var(--color-info); border-color: var(--color-info); }
+.btn-info:hover { background-color: #138496; border-color: #138496; }
+.btn-light { color: var(--color-dark); background-color: var(--color-light); border-color: var(--color-light); }
+.btn-light:hover { background-color: #e9ecef; border-color: #e9ecef; }
+.btn-dark { color: var(--color-white); background-color: var(--color-dark); border-color: var(--color-dark); }
+.btn-dark:hover { background-color: #0d1117; border-color: #0d1117; }
+.btn-link { color: var(--color-primary); text-decoration: underline; background-color: transparent; border-color: transparent; }
+.btn-link:hover { color: var(--color-700); }
 
-.btn-primary:hover {
-    color: var(--color-white);
-    background-color: var(--color-700);
-    border-color: var(--color-700);
-}
+/* Button Outlines */
+.btn-outline-primary { color: var(--color-primary); border-color: var(--color-primary); background-color: transparent; }
+.btn-outline-primary:hover { color: var(--color-white); background-color: var(--color-primary); }
+.btn-outline-secondary { color: var(--color-secondary); border-color: var(--color-secondary); background-color: transparent; }
+.btn-outline-secondary:hover { color: var(--color-white); background-color: var(--color-secondary); }
+.btn-outline-success { color: var(--color-success); border-color: var(--color-success); background-color: transparent; }
+.btn-outline-success:hover { color: var(--color-white); background-color: var(--color-success); }
+.btn-outline-danger { color: var(--color-danger); border-color: var(--color-danger); background-color: transparent; }
+.btn-outline-danger:hover { color: var(--color-white); background-color: var(--color-danger); }
+.btn-outline-warning { color: var(--color-warning); border-color: var(--color-warning); background-color: transparent; }
+.btn-outline-warning:hover { color: var(--color-dark); background-color: var(--color-warning); }
+.btn-outline-info { color: var(--color-info); border-color: var(--color-info); background-color: transparent; }
+.btn-outline-info:hover { color: var(--color-white); background-color: var(--color-info); }
+.btn-outline-light { color: var(--color-white); border-color: var(--color-white); background-color: transparent; }
+.btn-outline-light:hover { color: var(--color-dark); background-color: var(--color-white); }
+.btn-outline-dark { color: var(--color-dark); border-color: var(--color-dark); background-color: transparent; }
+.btn-outline-dark:hover { color: var(--color-white); background-color: var(--color-dark); }
 
-.btn-outline-light {
-    color: var(--color-white);
-    border-color: var(--color-white);
-    background-color: transparent;
-}
+/* Button Sizes */
+.btn-sm { padding: var(--rem-1) var(--rem-3); font-size: var(--font-size-sm); border-radius: var(--radius-sm); }
+.btn-lg { padding: var(--rem-2) var(--rem-4); font-size: var(--font-size-lg); border-radius: var(--radius-lg); }
 
-.btn-outline-light:hover {
-    color: var(--color-dark);
-    background-color: var(--color-white);
-    border-color: var(--color-white);
-}
-
-.btn-outline-primary {
-    border: 1px solid var(--color-primary);
-    color: var(--color-primary);
-    background-color: transparent;
-}
-
-.btn-outline-secondary {
-    border: 1px solid var(--color-secondary);
-    color: var(--color-secondary);
-    background-color: transparent;
-}
-
-.btn-sm {
-    padding: var(--rem-1) var(--rem-3);
-    font-size: var(--font-size-sm);
-    border-radius: var(--radius-sm);
-}
-
-.btn-success { background-color: var(--color-success); color: var(--color-light); }
+/* Button States */
+.btn:disabled, .btn.disabled { pointer-events: none; opacity: 0.65; }
+.btn.active { box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
 
 .btn .icon {
     width: var(--btn-icon-size);
@@ -924,7 +927,7 @@ ul.dropdown {
 }
 
 /* Form Components */
-.form-control {
+.form-control, input, select, textarea {
     display: block;
     width: auto;
     padding: var(--rem-2) var(--rem-3);
@@ -988,7 +991,7 @@ ul.dropdown {
 }
 
 label { margin-right: var(--rem-2); }
-.form-label {
+.form-label, label {
     margin-bottom: var(--rem-1);
     font-weight: var(--font-weight-medium);
     color: var(--color-dark);
