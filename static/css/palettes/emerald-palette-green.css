@@ -1,0 +1,34 @@
+/* EmeraldCSS v2 - Green Palette Override */
+/* Include this file after emerald-v2.css to switch to green palette */
+
+:root {
+    /* Brand and Body Variables */
+    --brand-color: #388e3c;
+    --body-bg: #f1f8e9;
+    --body-bg-rgb: 241, 248, 233;
+    
+    /* Semantic Colors */
+    --color-primary: var(--brand-color);
+    --color-secondary: #7b1fa2;
+    --color-success: #2e7d32;
+    --color-danger: #d32f2f;
+    --color-warning: #f57c00;
+    --color-info: #1976d2;
+    --color-muted: #757575;
+    
+    /* Green Palette (Material Design) */
+    --color-50: #e8f5e8;
+    --color-100: #c8e6c9;
+    --color-200: #a5d6a7;
+    --color-300: #81c784;
+    --color-400: #66bb6a;
+    --color-500: #4caf50;
+    --color-600: #43a047;
+    --color-700: #388e3c;
+    --color-800: #2e7d32;
+    --color-900: #1b5e20;
+    --color-A100: #b9f6ca;
+    --color-A200: #69f0ae;
+    --color-A400: #00e676;
+    --color-A700: #00c853;
+}

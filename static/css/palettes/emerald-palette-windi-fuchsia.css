@@ -1,0 +1,42 @@
+/* EmeraldCSS v2 - Windi Fuchsia Brand Palette */
+/* Include this file after emerald-v2.css to switch to Windi fuchsia theme */
+
+:root {
+    /* Brand and Body Variables */
+    --brand-color: #d946ef;
+    --body-bg: #fdf4ff;
+    --body-bg-rgb: 253, 244, 255;
+    
+    /* Semantic Colors */
+    --color-primary: var(--brand-color);
+    --color-secondary: #a21caf;
+    --color-success: #10b981;
+    --color-danger: #ef4444;
+    --color-warning: #f59e0b;
+    --color-info: #3b82f6;
+    --color-muted: #86198f;
+    
+    /* Windi Fuchsia Brand Palette */
+    --color-50: #fdf4ff;
+    --color-100: #fae8ff;
+    --color-200: #f5d0fe;
+    --color-300: #f0abfc;
+    --color-400: #e879f9;
+    --color-500: #d946ef;
+    --color-600: #c026d3;
+    --color-700: #a21caf;
+    --color-800: #86198f;
+    --color-900: #701a75;
+    --color-A100: #fae8ff;
+    --color-A200: #f0abfc;
+    --color-A400: #d946ef;
+    --color-A700: #701a75;
+}
+
+/* Windi Fuchsia specific overrides */
+.navbar-brand, main > header > a, main > header > div > a {
+    background-color: var(--color-600);
+    padding-left: var(--rem-3);
+    padding-right: var(--rem-3);
+    border-radius: var(--border-radius);
+}

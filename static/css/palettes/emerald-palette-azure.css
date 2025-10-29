@@ -1,0 +1,34 @@
+/* EmeraldCSS v2 - Azure Brand Palette */
+/* Include this file after emerald-v2.css to switch to Azure brand colors */
+
+:root {
+    /* Brand and Body Variables */
+    --brand-color: #0078d4;
+    --body-bg: #f3f2f1;
+    --body-bg-rgb: 243, 242, 241;
+    
+    /* Semantic Colors */
+    --color-primary: var(--brand-color);
+    --color-secondary: #8b5cf6;
+    --color-success: #22c55e;
+    --color-danger: #ef4444;
+    --color-warning: #f59e0b;
+    --color-info: #3b82f6;
+    --color-muted: #6b7280;
+    
+    /* Azure Brand Palette */
+    --color-50: #f3f2f1;
+    --color-100: #e1dfdd;
+    --color-200: #c7c2c0;
+    --color-300: #a19d9a;
+    --color-400: #8a8784;
+    --color-500: #605e5c;
+    --color-600: #484644;
+    --color-700: #323130;
+    --color-800: #201f1e;
+    --color-900: #11100f;
+    --color-A100: #e1dfdd;
+    --color-A200: #a19d9a;
+    --color-A400: #605e5c;
+    --color-A700: #11100f;
+}

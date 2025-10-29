@@ -1,0 +1,34 @@
+/* EmeraldCSS v2 - YouTube Brand Palette */
+/* Include this file after emerald-v2.css to switch to YouTube brand colors */
+
+:root {
+    /* Brand and Body Variables */
+    --brand-color: #ff0000;
+    --body-bg: #f9f9f9;
+    --body-bg-rgb: 249, 249, 249;
+    
+    /* Semantic Colors */
+    --color-primary: var(--brand-color);
+    --color-secondary: #8b5cf6;
+    --color-success: #22c55e;
+    --color-danger: #ef4444;
+    --color-warning: #f59e0b;
+    --color-info: #3b82f6;
+    --color-muted: #6b7280;
+    
+    /* YouTube Brand Palette */
+    --color-50: #fef2f2;
+    --color-100: #fee2e2;
+    --color-200: #fecaca;
+    --color-300: #fca5a5;
+    --color-400: #f87171;
+    --color-500: #ff0000;
+    --color-600: #dc2626;
+    --color-700: #b91c1c;
+    --color-800: #991b1b;
+    --color-900: #7f1d1d;
+    --color-A100: #fecaca;
+    --color-A200: #f87171;
+    --color-A400: #dc2626;
+    --color-A700: #7f1d1d;
+}

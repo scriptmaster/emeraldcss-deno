@@ -1,0 +1,34 @@
+/* EmeraldCSS v2 - Indigo Palette Override */
+/* Include this file after emerald-v2.css to switch to indigo palette */
+
+:root {
+    /* Brand and Body Variables */
+    --brand-color: #303f9f;
+    --body-bg: #e8eaf6;
+    --body-bg-rgb: 232, 234, 246;
+    
+    /* Semantic Colors */
+    --color-primary: var(--brand-color);
+    --color-secondary: #7b1fa2;
+    --color-success: #2e7d32;
+    --color-danger: #d32f2f;
+    --color-warning: #f57c00;
+    --color-info: #1976d2;
+    --color-muted: #757575;
+    
+    /* Indigo Palette (Material Design) */
+    --color-50: #e8eaf6;
+    --color-100: #c5cae9;
+    --color-200: #9fa8da;
+    --color-300: #7986cb;
+    --color-400: #5c6bc0;
+    --color-500: #3f51b5;
+    --color-600: #3949ab;
+    --color-700: #303f9f;
+    --color-800: #283593;
+    --color-900: #1a237e;
+    --color-A100: #8c9eff;
+    --color-A200: #536dfe;
+    --color-A400: #3d5afe;
+    --color-A700: #304ffe;
+}

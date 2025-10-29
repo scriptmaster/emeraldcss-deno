@@ -1,0 +1,34 @@
+/* EmeraldCSS v2 - Pink Palette Override */
+/* Include this file after emerald-v2.css to switch to pink palette */
+
+:root {
+    /* Brand and Body Variables */
+    --brand-color: #c2185b;
+    --body-bg: #fce4ec;
+    --body-bg-rgb: 252, 228, 236;
+    
+    /* Semantic Colors */
+    --color-primary: var(--brand-color);
+    --color-secondary: #7b1fa2;
+    --color-success: #2e7d32;
+    --color-danger: #d32f2f;
+    --color-warning: #f57c00;
+    --color-info: #1976d2;
+    --color-muted: #757575;
+    
+    /* Pink Palette (Material Design) */
+    --color-50: #fce4ec;
+    --color-100: #f8bbd9;
+    --color-200: #f48fb1;
+    --color-300: #f06292;
+    --color-400: #ec407a;
+    --color-500: #e91e63;
+    --color-600: #d81b60;
+    --color-700: #c2185b;
+    --color-800: #ad1457;
+    --color-900: #880e4f;
+    --color-A100: #ff80ab;
+    --color-A200: #ff4081;
+    --color-A400: #f50057;
+    --color-A700: #c51162;
+}

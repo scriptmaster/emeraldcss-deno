@@ -1,0 +1,42 @@
+/* EmeraldCSS v2 - GitHub Dark Brand Palette */
+/* Include this file after emerald-v2.css to switch to GitHub dark theme */
+
+:root {
+    /* Brand and Body Variables */
+    --brand-color: #f0f6fc;
+    --body-bg: #0d1117;
+    --body-bg-rgb: 13, 17, 23;
+    
+    /* Semantic Colors */
+    --color-primary: var(--brand-color);
+    --color-secondary: #8b5cf6;
+    --color-success: #22c55e;
+    --color-danger: #ef4444;
+    --color-warning: #f59e0b;
+    --color-info: #3b82f6;
+    --color-muted: #8b949e;
+    
+    /* GitHub Dark Brand Palette */
+    --color-50: #f0f6fc;
+    --color-100: #c9d1d9;
+    --color-200: #b1bac4;
+    --color-300: #8b949e;
+    --color-400: #6e7681;
+    --color-500: #484f58;
+    --color-600: #30363d;
+    --color-700: #21262d;
+    --color-800: #161b22;
+    --color-900: #0d1117;
+    --color-A100: #c9d1d9;
+    --color-A200: #8b949e;
+    --color-A400: #484f58;
+    --color-A700: #0d1117;
+}
+
+/* GitHub Dark specific overrides */
+.navbar-brand, main > header > a, main > header > div > a {
+    background-color: var(--color-800);
+    padding-left: var(--rem-3);
+    padding-right: var(--rem-3);
+    border-radius: var(--border-radius);
+}

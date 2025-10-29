@@ -1,0 +1,42 @@
+/* EmeraldCSS v2 - Windi Violet Brand Palette */
+/* Include this file after emerald-v2.css to switch to Windi violet theme */
+
+:root {
+    /* Brand and Body Variables */
+    --brand-color: #8b5cf6;
+    --body-bg: #f5f3ff;
+    --body-bg-rgb: 245, 243, 255;
+    
+    /* Semantic Colors */
+    --color-primary: var(--brand-color);
+    --color-secondary: #6d28d9;
+    --color-success: #10b981;
+    --color-danger: #ef4444;
+    --color-warning: #f59e0b;
+    --color-info: #3b82f6;
+    --color-muted: #5b21b6;
+    
+    /* Windi Violet Brand Palette */
+    --color-50: #f5f3ff;
+    --color-100: #ede9fe;
+    --color-200: #ddd6fe;
+    --color-300: #c4b5fd;
+    --color-400: #a78bfa;
+    --color-500: #8b5cf6;
+    --color-600: #7c3aed;
+    --color-700: #6d28d9;
+    --color-800: #5b21b6;
+    --color-900: #4c1d95;
+    --color-A100: #ede9fe;
+    --color-A200: #c4b5fd;
+    --color-A400: #8b5cf6;
+    --color-A700: #4c1d95;
+}
+
+/* Windi Violet specific overrides */
+.navbar-brand, main > header > a, main > header > div > a {
+    background-color: var(--color-600);
+    padding-left: var(--rem-3);
+    padding-right: var(--rem-3);
+    border-radius: var(--border-radius);
+}

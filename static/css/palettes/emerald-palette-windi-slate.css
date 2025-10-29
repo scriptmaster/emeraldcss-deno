@@ -1,0 +1,42 @@
+/* EmeraldCSS v2 - Windi Slate Brand Palette */
+/* Include this file after emerald-v2.css to switch to Windi slate theme */
+
+:root {
+    /* Brand and Body Variables */
+    --brand-color: #64748b;
+    --body-bg: #f8fafc;
+    --body-bg-rgb: 248, 250, 252;
+    
+    /* Semantic Colors */
+    --color-primary: var(--brand-color);
+    --color-secondary: #334155;
+    --color-success: #10b981;
+    --color-danger: #ef4444;
+    --color-warning: #f59e0b;
+    --color-info: #3b82f6;
+    --color-muted: #1e293b;
+    
+    /* Windi Slate Brand Palette */
+    --color-50: #f8fafc;
+    --color-100: #f1f5f9;
+    --color-200: #e2e8f0;
+    --color-300: #cbd5e1;
+    --color-400: #94a3b8;
+    --color-500: #64748b;
+    --color-600: #475569;
+    --color-700: #334155;
+    --color-800: #1e293b;
+    --color-900: #0f172a;
+    --color-A100: #f1f5f9;
+    --color-A200: #cbd5e1;
+    --color-A400: #64748b;
+    --color-A700: #0f172a;
+}
+
+/* Windi Slate specific overrides */
+.navbar-brand, main > header > a, main > header > div > a {
+    background-color: var(--color-600);
+    padding-left: var(--rem-3);
+    padding-right: var(--rem-3);
+    border-radius: var(--border-radius);
+}

@@ -1,0 +1,34 @@
+/* EmeraldCSS v2 - Custom Palette: test2 */
+/* Include this file after emerald-v2.css to switch to custom palette */
+
+:root {
+    /* Brand and Body Variables */
+    --brand-color: #f09800;
+    --body-bg: #ffe8a8;
+    --body-bg-rgb: 241, 245, 249;
+    
+    /* Semantic Colors */
+    --color-primary: var(--brand-color);
+    --color-secondary: #b6ce73;
+    --color-success: #1a7f37;
+    --color-danger: #cf222e;
+    --color-warning: #9a6700;
+    --color-info: #17a2b8;
+    --color-muted: #656d76;
+    
+    /* Custom Palette */
+    --color-50: #e3f2fd;
+    --color-100: #bbdefb;
+    --color-200: #90caf9;
+    --color-300: #64b5f6;
+    --color-400: #42a5f5;
+    --color-500: #2196f3;
+    --color-600: #1e88e5;
+    --color-700: #1976d2;
+    --color-800: #1565c0;
+    --color-900: #0d47a1;
+    --color-A100: #82b1ff;
+    --color-A200: #448aff;
+    --color-A400: #2979ff;
+    --color-A700: #2962ff;
+}

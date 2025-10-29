@@ -1,0 +1,34 @@
+/* EmeraldCSS v2 - Deep Orange Palette Override */
+/* Include this file after emerald-v2.css to switch to deep orange palette */
+
+:root {
+    /* Brand and Body Variables */
+    --brand-color: #e64a19;
+    --body-bg: #fbe9e7;
+    --body-bg-rgb: 251, 233, 231;
+    
+    /* Semantic Colors */
+    --color-primary: var(--brand-color);
+    --color-secondary: #7b1fa2;
+    --color-success: #2e7d32;
+    --color-danger: #d32f2f;
+    --color-warning: #f57c00;
+    --color-info: #1976d2;
+    --color-muted: #757575;
+    
+    /* Deep Orange Palette (Material Design) */
+    --color-50: #fbe9e7;
+    --color-100: #ffccbc;
+    --color-200: #ffab91;
+    --color-300: #ff8a65;
+    --color-400: #ff7043;
+    --color-500: #ff5722;
+    --color-600: #f4511e;
+    --color-700: #e64a19;
+    --color-800: #d84315;
+    --color-900: #bf360c;
+    --color-A100: #ff9e80;
+    --color-A200: #ff6e40;
+    --color-A400: #ff3d00;
+    --color-A700: #dd2c00;
+}

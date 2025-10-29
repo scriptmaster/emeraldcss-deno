@@ -1,0 +1,42 @@
+/* EmeraldCSS v2 - Windi Sky Brand Palette */
+/* Include this file after emerald-v2.css to switch to Windi sky theme */
+
+:root {
+    /* Brand and Body Variables */
+    --brand-color: #0ea5e9;
+    --body-bg: #f0f9ff;
+    --body-bg-rgb: 240, 249, 255;
+    
+    /* Semantic Colors */
+    --color-primary: var(--brand-color);
+    --color-secondary: #0369a1;
+    --color-success: #10b981;
+    --color-danger: #ef4444;
+    --color-warning: #f59e0b;
+    --color-info: #3b82f6;
+    --color-muted: #075985;
+    
+    /* Windi Sky Brand Palette */
+    --color-50: #f0f9ff;
+    --color-100: #e0f2fe;
+    --color-200: #bae6fd;
+    --color-300: #7dd3fc;
+    --color-400: #38bdf8;
+    --color-500: #0ea5e9;
+    --color-600: #0284c7;
+    --color-700: #0369a1;
+    --color-800: #075985;
+    --color-900: #0c4a6e;
+    --color-A100: #e0f2fe;
+    --color-A200: #7dd3fc;
+    --color-A400: #0ea5e9;
+    --color-A700: #0c4a6e;
+}
+
+/* Windi Sky specific overrides */
+.navbar-brand, main > header > a, main > header > div > a {
+    background-color: var(--color-600);
+    padding-left: var(--rem-3);
+    padding-right: var(--rem-3);
+    border-radius: var(--border-radius);
+}

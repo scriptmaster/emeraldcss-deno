@@ -1,0 +1,42 @@
+/* EmeraldCSS v2 - Windi Rose Brand Palette */
+/* Include this file after emerald-v2.css to switch to Windi rose theme */
+
+:root {
+    /* Brand and Body Variables */
+    --brand-color: #f43f5e;
+    --body-bg: #fff1f2;
+    --body-bg-rgb: 255, 241, 242;
+    
+    /* Semantic Colors */
+    --color-primary: var(--brand-color);
+    --color-secondary: #be123c;
+    --color-success: #10b981;
+    --color-danger: #ef4444;
+    --color-warning: #f59e0b;
+    --color-info: #3b82f6;
+    --color-muted: #9f1239;
+    
+    /* Windi Rose Brand Palette */
+    --color-50: #fff1f2;
+    --color-100: #ffe4e6;
+    --color-200: #fecdd3;
+    --color-300: #fda4af;
+    --color-400: #fb7185;
+    --color-500: #f43f5e;
+    --color-600: #e11d48;
+    --color-700: #be123c;
+    --color-800: #9f1239;
+    --color-900: #881337;
+    --color-A100: #ffe4e6;
+    --color-A200: #fda4af;
+    --color-A400: #f43f5e;
+    --color-A700: #881337;
+}
+
+/* Windi Rose specific overrides */
+.navbar-brand, main > header > a, main > header > div > a {
+    background-color: var(--color-600);
+    padding-left: var(--rem-3);
+    padding-right: var(--rem-3);
+    border-radius: var(--border-radius);
+}

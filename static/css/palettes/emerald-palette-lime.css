@@ -1,0 +1,34 @@
+/* EmeraldCSS v2 - Lime Palette Override */
+/* Include this file after emerald-v2.css to switch to lime palette */
+
+:root {
+    /* Brand and Body Variables */
+    --brand-color: #afb42b;
+    --body-bg: #f9fbe7;
+    --body-bg-rgb: 249, 251, 231;
+    
+    /* Semantic Colors */
+    --color-primary: var(--brand-color);
+    --color-secondary: #7b1fa2;
+    --color-success: #2e7d32;
+    --color-danger: #d32f2f;
+    --color-warning: #f57c00;
+    --color-info: #1976d2;
+    --color-muted: #757575;
+    
+    /* Lime Palette (Material Design) */
+    --color-50: #f9fbe7;
+    --color-100: #f0f4c3;
+    --color-200: #e6ee9c;
+    --color-300: #dce775;
+    --color-400: #d4e157;
+    --color-500: #cddc39;
+    --color-600: #c0ca33;
+    --color-700: #afb42b;
+    --color-800: #9e9d24;
+    --color-900: #827717;
+    --color-A100: #f4ff81;
+    --color-A200: #eeff41;
+    --color-A400: #c6ff00;
+    --color-A700: #aeea00;
+}

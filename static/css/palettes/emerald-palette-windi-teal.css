@@ -1,0 +1,42 @@
+/* EmeraldCSS v2 - Windi Teal Brand Palette */
+/* Include this file after emerald-v2.css to switch to Windi teal theme */
+
+:root {
+    /* Brand and Body Variables */
+    --brand-color: #14b8a6;
+    --body-bg: #f0fdfa;
+    --body-bg-rgb: 240, 253, 250;
+    
+    /* Semantic Colors */
+    --color-primary: var(--brand-color);
+    --color-secondary: #0f766e;
+    --color-success: #10b981;
+    --color-danger: #ef4444;
+    --color-warning: #f59e0b;
+    --color-info: #3b82f6;
+    --color-muted: #115e59;
+    
+    /* Windi Teal Brand Palette */
+    --color-50: #f0fdfa;
+    --color-100: #ccfbf1;
+    --color-200: #99f6e4;
+    --color-300: #5eead4;
+    --color-400: #2dd4bf;
+    --color-500: #14b8a6;
+    --color-600: #0d9488;
+    --color-700: #0f766e;
+    --color-800: #115e59;
+    --color-900: #134e4a;
+    --color-A100: #ccfbf1;
+    --color-A200: #5eead4;
+    --color-A400: #14b8a6;
+    --color-A700: #134e4a;
+}
+
+/* Windi Teal specific overrides */
+.navbar-brand, main > header > a, main > header > div > a {
+    background-color: var(--color-600);
+    padding-left: var(--rem-3);
+    padding-right: var(--rem-3);
+    border-radius: var(--border-radius);
+}

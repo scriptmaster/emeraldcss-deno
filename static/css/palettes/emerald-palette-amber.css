@@ -1,0 +1,34 @@
+/* EmeraldCSS v2 - Amber Palette Override */
+/* Include this file after emerald-v2.css to switch to amber palette */
+
+:root {
+    /* Brand and Body Variables */
+    --brand-color: #ffa000;
+    --body-bg: #fff8e1;
+    --body-bg-rgb: 255, 248, 225;
+    
+    /* Semantic Colors */
+    --color-primary: var(--brand-color);
+    --color-secondary: #7b1fa2;
+    --color-success: #2e7d32;
+    --color-danger: #d32f2f;
+    --color-warning: #f57c00;
+    --color-info: #1976d2;
+    --color-muted: #757575;
+    
+    /* Amber Palette (Material Design) */
+    --color-50: #fff8e1;
+    --color-100: #ffecb3;
+    --color-200: #ffe082;
+    --color-300: #ffd54f;
+    --color-400: #ffca28;
+    --color-500: #ffc107;
+    --color-600: #ffb300;
+    --color-700: #ffa000;
+    --color-800: #ff8f00;
+    --color-900: #ff6f00;
+    --color-A100: #ffe57f;
+    --color-A200: #ffd740;
+    --color-A400: #ffc400;
+    --color-A700: #ffab00;
+}

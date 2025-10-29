@@ -1,0 +1,42 @@
+/* EmeraldCSS v2 - Windi Lime Brand Palette */
+/* Include this file after emerald-v2.css to switch to Windi lime theme */
+
+:root {
+    /* Brand and Body Variables */
+    --brand-color: #84cc16;
+    --body-bg: #f7fee7;
+    --body-bg-rgb: 247, 254, 231;
+    
+    /* Semantic Colors */
+    --color-primary: var(--brand-color);
+    --color-secondary: #4d7c0f;
+    --color-success: #10b981;
+    --color-danger: #ef4444;
+    --color-warning: #f59e0b;
+    --color-info: #3b82f6;
+    --color-muted: #365314;
+    
+    /* Windi Lime Brand Palette */
+    --color-50: #f7fee7;
+    --color-100: #ecfccb;
+    --color-200: #d9f99d;
+    --color-300: #bef264;
+    --color-400: #a3e635;
+    --color-500: #84cc16;
+    --color-600: #65a30d;
+    --color-700: #4d7c0f;
+    --color-800: #3f6212;
+    --color-900: #365314;
+    --color-A100: #ecfccb;
+    --color-A200: #bef264;
+    --color-A400: #84cc16;
+    --color-A700: #365314;
+}
+
+/* Windi Lime specific overrides */
+.navbar-brand, main > header > a, main > header > div > a {
+    background-color: var(--color-600);
+    padding-left: var(--rem-3);
+    padding-right: var(--rem-3);
+    border-radius: var(--border-radius);
+}

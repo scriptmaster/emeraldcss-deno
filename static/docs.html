@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>EmeraldCSS v2 Demo - Container, Grid & Utilities</title>
+    <link rel="stylesheet" href="/emerald-v2.css">
+    <link id="link-palette" rel="stylesheet" href="">
+    <style>
+        /* Modal styles for better appearance */
+        .modal.show {
+            display: block !important;
+        }
+        
+        .modal.show .modal-dialog {
+            animation: modalSlideIn 0.3s ease-out;
+        }
+        
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(-50%);
+            }
+        }
+        
+        .btn-close:hover {
+            color: #dc3545;
+        }
+        
+        .color-preview {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+        
+        .color-preview:hover {
+            transform: scale(1.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .footer-link {
+            color: #6c757d;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        .footer-link:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <main class="page"> <!-- or <div class="page"> is same as <main> -->
+        <header class="navbar">
+            <div class="container">
+                <a href="" class="navbar-brand">EmeraldCSS v2</a>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#structure" class="nav-link">Structure</a></li>
+                    <li class="nav-item"><a href="#variables" class="nav-link">Variables</a></li>
+                    <li class="nav-item"><a href="#typography" class="nav-link">Typography</a></li>
+                    <li class="nav-item"><a href="#grid" class="nav-link">Grid</a></li>
+                    <li class="nav-item"><a href="#utilities" class="nav-link">Utilities</a></li>
+                </ul>
+                <div class="navbar-nav">
+                    <select id="palette-selector" class="form-select w-auto ml-2">
+                        <option value="">Default (Blue)</option>
+                    </select>
+                    <button id="palette-editor-btn" class="btn btn-primary ml-1">Edit Palette</button>
+                </div>
+            </div>
+        </header>
+        
+        <div class="page-wrapper">
+            <section class="page-header">
+                <div class="container">
+                    <h1>EmeraldCSS v2 Documentation</h1>
+                    <h2>A utility first css-framework with comprehensive container system and 12-column grid.</h2>
+                </div>
+            </section>
+            
+            <section class="page-body">
+                <div class="container">
+                    <div class="card">
+                        <p class="sticky-note float-right"><strong>Quick Tip:</strong>This page is a perfect example of how to build beautiful interfaces using only EmeraldCSS v2 utility classes!</p>
+                        <h3 class="title">About `emerald-v2.css`</h3>
+                        <ul>
+                            <li><strong>File Size:</strong> 27.0 KB (normal), 5.6 KB (gzipped)</li>
+                            <li><strong>Lines of Code:</strong> 1001 lines</li>
+                            <li><strong>CSS Reset:</strong> Minimal reset with box-sizing, margin, padding, and list styling</li>
+                            <li><strong>Variables:</strong> 100+ CSS custom properties</li>
+                            <li><strong>Utility Classes:</strong> 200+ utility classes for layout, typography, colors, and components</li>
+                        </ul>
+                        <h3 class="mt-3">Benefits</h3>
+                        <ul>
+                            <li>Zero custom CSS - Pure utility-first approach</li>
+                            <li>Responsive design - Built-in responsive classes</li>
+                            <li>Grid system - 12-column grid with responsive breakpoints</li>
+                            <li>Framework validation - Proves completeness of EmeraldCSS v2, comparable to bootsrap and tailwind</li>
+                        </ul>
+                    </div>
+            
+            <!-- Page Structure Documentation -->
+            <div class="card" id="structure">
+                <h2 class="title">Page Structure</h2>
+                <p>EmeraldCSS v2 follows a semantic HTML structure that's compatible with Tabler and Bootstrap patterns.</p>
+                
+                <h3>Semantic HTML Structure</h3>
+                <div class="card">
+                    <pre><code>&lt;main&gt;
+  &lt;header&gt;  &lt;!-- Navigation header (white background) --&gt;
+    &lt;nav&gt;
+      &lt;a href="#"&gt;Brand&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+  &lt;div&gt;  &lt;!-- Page wrapper (light gray background) --&gt;
+    &lt;section&gt;  &lt;!-- Page header (content header) --&gt;
+      &lt;h1&gt;Page Title&lt;/h1&gt;
+    &lt;/section&gt;
+    &lt;section&gt;  &lt;!-- Page body (main content) --&gt;
+      &lt;p&gt;Content goes here&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/div&gt;
+&lt;/main&gt;</code></pre>
+                </div>
+                
+                <h3>Framework Comparison</h3>
+                
+                <h4>Tabler Structure (Class-based)</h4>
+                <div class="card">
+                    <pre><code>&lt;div class="page"&gt;
+  &lt;div class="navbar"&gt;
+    &lt;div class="container"&gt;
+      &lt;a class="navbar-brand"&gt;Brand&lt;/a&gt;
+      &lt;ul class="navbar-nav"&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link"&gt;Link&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="page-wrapper"&gt;
+    &lt;div class="page-header"&gt;
+      &lt;div class="container"&gt;
+        &lt;div class="row"&gt;
+          &lt;div class="col"&gt;
+            &lt;h1 class="page-title"&gt;Page Title&lt;/h1&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="page-body"&gt;
+      &lt;div class="container"&gt;
+        &lt;div class="row"&gt;
+          &lt;div class="col-12"&gt;
+            &lt;p&gt;Content goes here&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                
+                <h4>Bootstrap Structure</h4>
+                <div class="card">
+                    <ul>
+                        <li><code>.container</code> → <code>.row</code> → <code>.col</code></li>
+                        <li><code>.navbar</code> (separate from main content)</li>
+                    </ul>
+                </div>
+                
+                <h4>EmeraldCSS v2 Structure (Two Forms)</h4>
+                
+                <h5>Form 1: Tabler-like with Classes</h5>
+                <div class="card">
+                    <pre><code>&lt;main class="page"&gt;
+  &lt;header class="navbar"&gt;
+    &lt;div class="container"&gt;
+      &lt;a class="navbar-brand"&gt;Brand&lt;/a&gt;
+      &lt;ul class="navbar-nav"&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link"&gt;Link&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+  &lt;div class="page-wrapper"&gt;
+    &lt;section class="page-header"&gt;
+      &lt;div class="container"&gt;
+        &lt;h1&gt;Page Title&lt;/h1&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;section class="page-body"&gt;
+      &lt;div class="container"&gt;
+        &lt;p&gt;Content goes here&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/div&gt;
+&lt;/main&gt;</code></pre>
+                </div>
+                
+                <h5>Form 2: Semantic Class-less Structure</h5>
+                <div class="card">
+                    <pre><code>&lt;main&gt;
+  &lt;header&gt;
+    &lt;div class="container"&gt;
+      &lt;a&gt;Brand&lt;/a&gt;
+      &lt;nav&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a&gt;Link&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+  &lt;div&gt;
+    &lt;section&gt;
+      &lt;div class="container"&gt;
+        &lt;h1&gt;Page Title&lt;/h1&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+      &lt;div class="container"&gt;
+        &lt;p&gt;Content goes here&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/div&gt;
+&lt;/main&gt;</code></pre>
+                </div>
+                
+                <h5>Structure Breakdown</h5>
+                <div class="card">
+                    <ul>
+                        <li><strong>Main Container:</strong> <code>main</code> (or <code>main.page</code>)</li>
+                        <li><strong>Navigation:</strong> <code>header</code> (or <code>header.navbar</code>)</li>
+                        <li><strong>Page Wrapper:</strong> <code>div</code> (or <code>div.page-wrapper</code>)</li>
+                        <li><strong>Page Header:</strong> <code>section:first-child</code> (or <code>section.page-header</code>)</li>
+                        <li><strong>Page Body:</strong> <code>section:not(:first-child)</code> (or <code>section.page-body</code>)</li>
+                    </ul>
+                </div>
+                
+                <h5>CSS Selector Logic</h5>
+                <div class="card">
+                    <ul>
+                        <li><code>main &gt; header</code> - Navigation header styling</li>
+                        <li><code>main &gt; div</code> - Page wrapper (light gray background)</li>
+                        <li><code>main &gt; div &gt; section:first-child</code> - Page header (content header)</li>
+                        <li><code>main &gt; div &gt; section:not(:first-child)</code> - Page body (main content)</li>
+                    </ul>
+                </div>
+                
+                <h3>Color Scheme</h3>
+                <div class="card">
+                    <ul>
+                        <li><strong>Navigation Header:</strong> White background with border-bottom</li>
+                        <li><strong>Page Wrapper:</strong> Light gray background (<code>var(--color-light)</code>)</li>
+                        <li><strong>Page Header:</strong> Transparent background</li>
+                        <li><strong>Page Body:</strong> Transparent background</li>
+                    </ul>
+                </div>
+                
+                <h3>Spacing</h3>
+                <div class="card">
+                    <ul>
+                        <li><strong>Page Header:</strong> Margin-top only (<code>var(--rem-8)</code>)</li>
+                        <li><strong>Page Body:</strong> Margin top and bottom (<code>var(--rem-8)</code>)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Root Variables Demo -->
+            <div class="card">
+                <h2 class="title">Root Variables</h2>
+                <p>EmeraldCSS v2 uses CSS custom properties (variables) for consistent theming and easy customization.</p>
+                <p><strong>Total Variables:</strong> 49 variables across 6 sub-sections</p>
+                <ul>
+                    <li><strong>Colors:</strong> 13 variables</li>
+                    <li><strong>Typography:</strong> 7 variables</li>
+                    <li><strong>Fonts:</strong> 4 variables</li>
+                    <li><strong>Spacing:</strong> 10 variables</li>
+                    <li><strong>Border Radius:</strong> 4 variables</li>
+                    <li><strong>Percentages:</strong> 12 variables</li>
+                    <li><strong>Breakpoints:</strong> 7 variables</li>
+                </ul>
+                
+                <h3>Color Variables (13 variables)</h3>
+                <ul>
+                    <li><code>--color-primary: #0969da</code> - GitHub blue, primary brand color</li>
+                    <li><code>--color-secondary: #6f42c1</code> - Purple, secondary brand color</li>
+                    <li><code>--color-success: #1a7f37</code> - Green, success states</li>
+                    <li><code>--color-danger: #cf222e</code> - Red, error states</li>
+                    <li><code>--color-warning: #9a6700</code> - Orange, warning states</li>
+                    <li><code>--color-info: #17a2b8</code> - Teal, informational states (Tabler-inspired)</li>
+                    <li><code>--color-azure: #4299e1</code> - Azure blue, additional accent color</li>
+                    <li><code>--color-muted: #656d76</code> - Gray, secondary text</li>
+                    <li><code>--color-dark: #1f2328</code> - Dark gray, primary text</li>
+                    <li><code>--color-light: #f6f8fa</code> - Light gray, backgrounds</li>
+                    <li><code>--color-white: #ffffff</code> - Pure white</li>
+                    <li><code>--color-border-1: #e1e4e8</code> - Light gray, borders</li>
+                </ul>
+            </div>
+
+            <!-- CSS Reset Demo -->
+            <div class="card">
+                <h2 class="title">CSS Reset</h2>
+                <p>EmeraldCSS v2 includes a minimal CSS reset that normalizes browser defaults while preserving useful styling.</p>
+                
+                <h3>Reset Features</h3>
+                <ul>
+                    <li><strong>Box-sizing:</strong> Border-box for all elements</li>
+                    <li><strong>Margin/Padding:</strong> Reset to 0 for consistent spacing</li>
+                    <li><strong>List Styling:</strong> Proper bullet points and indentation</li>
+                    <li><strong>Minimal Approach:</strong> Only resets what's necessary</li>
+                </ul>
+                
+                <h3>List Demo</h3>
+                <div class="card">
+                    <h4>Unordered List</h4>
+                    <ul>
+                        <li>First item with proper bullet point</li>
+                        <li>Second item with spacing</li>
+                        <li>Third item with consistent styling</li>
+                    </ul>
+                    
+                    <h4>Ordered List</h4>
+                    <ol>
+                        <li>First numbered item</li>
+                        <li>Second numbered item</li>
+                        <li>Third numbered item</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Base Styles Demo -->
+            <div class="card">
+                <h2 class="title">Base Styles</h2>
+                <p>EmeraldCSS v2 provides consistent base styles for HTML elements.</p>
+                <p><strong>Total Rules:</strong> 2 base style rules (html, body)</p>
+                
+                <h3>Font Family Fallback Chain</h3>
+                <p>The <code>--font-family</code> variable uses a comprehensive fallback chain:</p>
+                <ol>
+                    <li><strong>-apple-system</strong> - Apple's system font (San Francisco on macOS/iOS)</li>
+                    <li><strong>BlinkMacSystemFont</strong> - Chrome's system font on macOS</li>
+                    <li><strong>'Segoe UI'</strong> - Microsoft's system font (Windows 10+)</li>
+                    <li><strong>'Noto Sans'</strong> - Google's web font (cross-platform)</li>
+                    <li><strong>'Helvetica Neue'</strong> - Apple's Helvetica variant</li>
+                    <li><strong>Helvetica</strong> - Classic Helvetica</li>
+                    <li><strong>Arial</strong> - Universal fallback</li>
+                    <li><strong>sans-serif</strong> - Generic sans-serif fallback</li>
+                </ol>
+                
+                <h3>Font Demo</h3>
+                <div class="card">
+                    <p><strong>System Font Stack:</strong> This text uses the complete font fallback chain. On macOS, it will use San Francisco (-apple-system). On Windows, it will use Segoe UI. On other systems, it will fall back to Noto Sans, Helvetica, or Arial.</p>
+                </div>
+            </div>
+
+            <!-- Typography Demo -->
+            <div class="card">
+                <h2 class="title">Typography</h2>
+                <p>EmeraldCSS v2 provides a comprehensive typography system with consistent font sizes, weights, and line heights.</p>
+                
+                <div class="card">
+                    <h1>Heading 1 - Main Title</h1>
+                    <h2>Heading 2 - Section Title</h2>
+                    <h3>Heading 3 - Subsection</h3>
+                    <h4>Heading 4 - Minor Heading</h4>
+                    <h5>Heading 5 - Small Heading</h5>
+                    <h6>Heading 6 - Smallest Heading</h6>
+                    <p>This is a paragraph with <strong>bold text</strong> and <em>italic text</em>. It demonstrates the default body text styling with proper line height and spacing.</p>
+                    <p class="text-muted">This is muted text for secondary information or less important content.</p>
+                    <small>This is small text for captions, footnotes, or fine print.</small>
+                </div>
+            </div>
+
+            <!-- Text Utilities Demo -->
+            <div class="card">
+                <h2 class="title">Text Utilities</h2>
+                <p>EmeraldCSS v2 provides utility classes for text styling and font weights.</p>
+                
+                <div class="card">
+                    <div class="text-xs">Extra Small Text (.text-xs)</div>
+                    <div class="text-sm">Small Text (.text-sm)</div>
+                    <div class="text-base">Base Text (.text-base)</div>
+                    <div class="text-lg">Large Text (.text-lg)</div>
+                    <div class="text-xl">Extra Large Text (.text-xl)</div>
+                    <div class="text-2xl">2XL Text (.text-2xl)</div>
+                    <div class="text-3xl">3XL Text (.text-3xl)</div>
+                    <div class="text-4xl">4XL Text (.text-4xl)</div>
+                    
+                    <div class="font-normal">Normal Weight (.font-normal)</div>
+                    <div class="font-medium">Medium Weight (.font-medium)</div>
+                    <div class="font-semibold">Semibold Weight (.font-semibold)</div>
+                    <div class="font-bold">Bold Weight (.font-bold)</div>
+                </div>
+            </div>
+
+            <!-- Color System Demo -->
+            <div class="card">
+                <h2 class="title">Color System</h2>
+                <p>EmeraldCSS v2 features a modular color system with semantic tokens and an efficient generic palette system that reduces file size while providing maximum flexibility.</p>
+                
+                <div class="card">
+                    <h3>Semantic Colors</h3>
+                    <p>Core semantic colors for consistent UI patterns across all applications.</p>
+                    <div class="row">
+                        <div class="col-6 col-md-3">
+                            <div class="bg-primary text-white text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem;">Primary</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="bg-secondary text-white text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem;">Secondary</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="bg-success text-white text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem;">Success</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="bg-danger text-white text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem;">Danger</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="bg-warning text-white text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem;">Warning</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="bg-info text-white text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem;">Info</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="bg-azure text-white text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem;">Azure</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="bg-muted text-white text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem;">Muted</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3>Generic Color Palette System</h3>
+                <p>EmeraldCSS v2 uses a revolutionary generic color palette system that reduces file size by 22% while providing maximum flexibility. Instead of including all color palettes in the main CSS, you can load only the palette you need.</p>
+                
+                <h4>How It Works</h4>
+                <div class="card">
+                    <p>The system uses generic variable names (<code>--color-50</code> to <code>--color-900</code>) that work with any palette. The main CSS includes a default blue palette, and additional palettes override these variables when loaded.</p>
+                </div>
+                
+                <h4>Default Blue Palette (Material Design)</h4>
+                <div class="card">
+                    <p>Complete Material Design blue palette with 14 shades from lightest to darkest:</p>
+                    <div class="row">
+                        <div class="col-6 col-md-3">
+                            <div class="bg-50 text-dark text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-weight: bold;">50</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="bg-100 text-dark text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-weight: bold;">100</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="bg-200 text-dark text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-weight: bold;">200</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="bg-300 text-dark text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-weight: bold;">300</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="bg-400 text-dark text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-weight: bold;">400</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="bg-500 text-white text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-weight: bold;">500</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="bg-600 text-white text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-weight: bold;">600</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="bg-700 text-white text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-weight: bold;">700</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="bg-800 text-white text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-weight: bold;">800</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="bg-900 text-white text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-weight: bold;">900</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="bg-A100 text-dark text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-weight: bold;">A100</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="bg-A200 text-white text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-weight: bold;">A200</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="bg-A400 text-white text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-weight: bold;">A400</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="bg-A700 text-white text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-weight: bold;">A700</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h4>Palette Override System</h4>
+                <div class="card">
+                    <p>Load additional palettes by including them after the main CSS file. Each palette file is only ~500 bytes:</p>
+                    <pre><code>&lt;!-- Default Blue Palette (included in main CSS) --&gt;
+&lt;link rel="stylesheet" href="/emerald-v2.css"&gt;
+
+&lt;!-- Override with Red Palette --&gt;
+&lt;link rel="stylesheet" href="/palettes/emerald-palette-red.css"&gt;
+
+&lt;!-- Override with Purple Palette --&gt;
+&lt;link rel="stylesheet" href="/palettes/emerald-palette-purple.css"&gt;
+
+&lt;!-- Override with Green Palette --&gt;
+&lt;link rel="stylesheet" href="/palettes/emerald-palette-green.css"&gt;</code></pre>
+                </div>
+                    
+                <h4>Available Palettes (29 Total)</h4>
+                <div class="card">
+                    <p>Complete Material Design color palette collection plus popular brand palettes - each palette includes 14 shades (50-900 + A100-A700) plus brand-specific body backgrounds and semantic colors:</p>
+                    <div class="row">
+                        <div class="col-6 col-md-3">
+                            <div class="card" style="border: 2px solid var(--color-500);">
+                                <h5 class="text-500">Blue (Default)</h5>
+                                <p class="text-muted text-sm">Included in main CSS</p>
+                                <div class="bg-500 text-white text-center" style="padding: 0.5rem; border-radius: 4px;">Primary Blue</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card" style="border: 2px solid #f44336;">
+                                <h5 style="color: #f44336;">Red</h5>
+                                <p class="text-muted text-sm">emerald-palette-red.css</p>
+                                <div style="background-color: #f44336; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Primary Red</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card" style="border: 2px solid #e91e63;">
+                                <h5 style="color: #e91e63;">Pink</h5>
+                                <p class="text-muted text-sm">emerald-palette-pink.css</p>
+                                <div style="background-color: #e91e63; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Primary Pink</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card" style="border: 2px solid #9c27b0;">
+                                <h5 style="color: #9c27b0;">Purple</h5>
+                                <p class="text-muted text-sm">emerald-palette-purple.css</p>
+                                <div style="background-color: #9c27b0; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Primary Purple</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card" style="border: 2px solid #673ab7;">
+                                <h5 style="color: #673ab7;">Deep Purple</h5>
+                                <p class="text-muted text-sm">emerald-palette-deep-purple.css</p>
+                                <div style="background-color: #673ab7; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Deep Purple</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card" style="border: 2px solid #3f51b5;">
+                                <h5 style="color: #3f51b5;">Indigo</h5>
+                                <p class="text-muted text-sm">emerald-palette-indigo.css</p>
+                                <div style="background-color: #3f51b5; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Primary Indigo</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card" style="border: 2px solid #03a9f4;">
+                                <h5 style="color: #03a9f4;">Light Blue</h5>
+                                <p class="text-muted text-sm">emerald-palette-light-blue.css</p>
+                                <div style="background-color: #03a9f4; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Light Blue</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card" style="border: 2px solid #00bcd4;">
+                                <h5 style="color: #00bcd4;">Cyan</h5>
+                                <p class="text-muted text-sm">emerald-palette-cyan.css</p>
+                                <div style="background-color: #00bcd4; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Primary Cyan</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card" style="border: 2px solid #009688;">
+                                <h5 style="color: #009688;">Teal</h5>
+                                <p class="text-muted text-sm">emerald-palette-teal.css</p>
+                                <div style="background-color: #009688; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Primary Teal</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card" style="border: 2px solid #4caf50;">
+                                <h5 style="color: #4caf50;">Green</h5>
+                                <p class="text-muted text-sm">emerald-palette-green.css</p>
+                                <div style="background-color: #4caf50; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Primary Green</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card" style="border: 2px solid #8bc34a;">
+                                <h5 style="color: #8bc34a;">Light Green</h5>
+                                <p class="text-muted text-sm">emerald-palette-light-green.css</p>
+                                <div style="background-color: #8bc34a; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Light Green</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card" style="border: 2px solid #cddc39;">
+                                <h5 style="color: #cddc39;">Lime</h5>
+                                <p class="text-muted text-sm">emerald-palette-lime.css</p>
+                                <div style="background-color: #cddc39; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Primary Lime</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card" style="border: 2px solid #ffeb3b;">
+                                <h5 style="color: #ffeb3b;">Yellow</h5>
+                                <p class="text-muted text-sm">emerald-palette-yellow.css</p>
+                                <div style="background-color: #ffeb3b; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Primary Yellow</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card" style="border: 2px solid #ffc107;">
+                                <h5 style="color: #ffc107;">Amber</h5>
+                                <p class="text-muted text-sm">emerald-palette-amber.css</p>
+                                <div style="background-color: #ffc107; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Primary Amber</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card" style="border: 2px solid #ff9800;">
+                                <h5 style="color: #ff9800;">Orange</h5>
+                                <p class="text-muted text-sm">emerald-palette-orange.css</p>
+                                <div style="background-color: #ff9800; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Primary Orange</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card" style="border: 2px solid #ff5722;">
+                                <h5 style="color: #ff5722;">Deep Orange</h5>
+                                <p class="text-muted text-sm">emerald-palette-deep-orange.css</p>
+                                <div style="background-color: #ff5722; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Deep Orange</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card" style="border: 2px solid #795548;">
+                                <h5 style="color: #795548;">Brown</h5>
+                                <p class="text-muted text-sm">emerald-palette-brown.css</p>
+                                <div style="background-color: #795548; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Primary Brown</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card" style="border: 2px solid #9e9e9e;">
+                                <h5 style="color: #9e9e9e;">Grey</h5>
+                                <p class="text-muted text-sm">emerald-palette-grey.css</p>
+                                <div style="background-color: #9e9e9e; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Primary Grey</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card" style="border: 2px solid #607d8b;">
+                                <h5 style="color: #607d8b;">Blue Grey</h5>
+                                <p class="text-muted text-sm">emerald-palette-blue-grey.css</p>
+                                <div style="background-color: #607d8b; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Blue Grey</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4>Brand Palettes</h4>
+                    <p>Popular brand color palettes with authentic brand colors and matching body backgrounds:</p>
+                    <div class="row">
+                        <div class="col-6 col-md-3">
+                            <div class="card" style="border: 2px solid #181717;">
+                                <h5 style="color: #181717;">GitHub</h5>
+                                <p class="text-muted text-sm">emerald-palette-github.css</p>
+                                <div style="background-color: #181717; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">GitHub</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card bg-dark" style="border: 2px solid #f0f6fc;">
+                                <h5 class="text-white">GitHub Dark</h5>
+                                <p class="text-muted text-sm">emerald-palette-github-dark.css</p>
+                                <div style="background-color: #f0f6fc; color: #0d1117; text-align: center; padding: 0.5rem; border-radius: 4px;">GitHub Dark</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card" style="border: 2px solid #0078d4;">
+                                <h5 style="color: #0078d4;">Azure</h5>
+                                <p class="text-muted text-sm">emerald-palette-azure.css</p>
+                                <div style="background-color: #0078d4; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Azure</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card" style="border: 2px solid #ff0000;">
+                                <h5 style="color: #ff0000;">YouTube</h5>
+                                <p class="text-muted text-sm">emerald-palette-youtube.css</p>
+                                <div style="background-color: #ff0000; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">YouTube</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card" style="border: 2px solid #1da1f2;">
+                                <h5 style="color: #1da1f2;">Twitter</h5>
+                                <p class="text-muted text-sm">emerald-palette-twitter.css</p>
+                                <div style="background-color: #1da1f2; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Twitter</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card" style="border: 2px solid #e4405f;">
+                                <h5 style="color: #e4405f;">Instagram</h5>
+                                <p class="text-muted text-sm">emerald-palette-instagram.css</p>
+                                <div style="background-color: #e4405f; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Instagram</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card" style="border: 2px solid #007aff;">
+                                <h5 style="color: #007aff;">Apple</h5>
+                                <p class="text-muted text-sm">emerald-palette-apple.css</p>
+                                <div style="background-color: #007aff; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Apple</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card" style="border: 2px solid #206bc4;">
+                                <h5 style="color: #206bc4;">Tabler</h5>
+                                <p class="text-muted text-sm">emerald-palette-tabler.css</p>
+                                <div style="background-color: #206bc4; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Tabler</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card" style="border: 2px solid #1877F2;">
+                                <h5 style="color: #1877F2;">Facebook</h5>
+                                <p class="text-muted text-sm">emerald-palette-facebook.css</p>
+                                <div style="background-color: #1877F2; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Facebook</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card" style="border: 2px solid #0a66c2;">
+                                <h5 style="color: #0a66c2;">LinkedIn</h5>
+                                <p class="text-muted text-sm">emerald-palette-linkedin.css</p>
+                                <div style="background-color: #0a66c2; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">LinkedIn</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card" style="border: 2px solid #dc4e41;">
+                                <h5 style="color: #dc4e41;">Google</h5>
+                                <p class="text-muted text-sm">emerald-palette-google.css</p>
+                                <div style="background-color: #dc4e41; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Google</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h4>Generic Utility Classes</h4>
+                <div class="card">
+                    <p>All palettes use the same utility class names, making it easy to switch between palettes:</p>
+                    <h5>Background Colors</h5>
+                    <p><code>.bg-50</code> to <code>.bg-900</code> and <code>.bg-A100</code> to <code>.bg-A700</code></p>
+                    
+                    <h5>Text Colors</h5>
+                    <p><code>.text-50</code> to <code>.text-900</code> and <code>.text-A100</code> to <code>.text-A700</code></p>
+                    
+                    <h5>Usage Examples</h5>
+                    <pre><code>&lt;!-- These classes work with any palette --&gt;
+&lt;div class="bg-500 text-white"&gt;Primary Color&lt;/div&gt;
+&lt;div class="bg-100 text-900"&gt;Light Background&lt;/div&gt;
+&lt;div class="bg-A200 text-white"&gt;Accent Color&lt;/div&gt;</code></pre>
+                </div>
+                
+                <h4>File Size Benefits</h4>
+                <div class="card">
+                    <ul>
+                        <li><strong>Main CSS:</strong> 27.0KB raw, 5.6KB gzipped (22% smaller than traditional approach)</li>
+                        <li><strong>Palette Files:</strong> ~500 bytes each (only load what you need)</li>
+                        <li><strong>Total Savings:</strong> 6KB raw, 1KB gzipped compared to including all palettes</li>
+                        <li><strong>Modular:</strong> Load only the palette you need for your project</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Container System Demo -->
+            <div class="card">
+                <h2 class="title">Container System</h2>
+                <p>EmeraldCSS v2 provides responsive containers with different max-widths and breakpoints.</p>
+                
+                <div class="card">
+                    <div class="container bg-500 text-white text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-weight: bold;">Default Container (1280px max-width)</div>
+                    <div class="container-sm bg-600 text-white text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-weight: bold;">Small Container (640px max-width)</div>
+                    <div class="container-md bg-700 text-white text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-weight: bold;">Medium Container (768px max-width)</div>
+                    <div class="container-lg bg-800 text-white text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-weight: bold;">Large Container (1024px max-width)</div>
+                    <div class="container-xl bg-900 text-white text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-weight: bold;">Extra Large Container (1280px max-width)</div>
+                </div>
+            </div>
+
+            <!-- 12-Column Grid Demo -->
+            <div class="card">
+                <h2 class="title">12-Column Grid System</h2>
+                <p>EmeraldCSS v2 includes a Bootstrap-like 12-column grid system with responsive breakpoints.</p>
+                
+                <div class="card">
+                    <div class="row">
+                        <div class="col-12 bg-500 text-white text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-weight: bold;">Full Width (col-12)</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 bg-600 text-white text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-weight: bold;">Half Width (col-6)</div>
+                        <div class="col-6 bg-700 text-white text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-weight: bold;">Half Width (col-6)</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 bg-800 text-white text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-weight: bold;">One Third (col-4)</div>
+                        <div class="col-8 bg-900 text-white text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-weight: bold;">Two Thirds (col-8)</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3 bg-A100 text-dark text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-weight: bold;">Quarter (col-3)</div>
+                        <div class="col-3 bg-A200 text-white text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-weight: bold;">Quarter (col-3)</div>
+                        <div class="col-3 bg-A400 text-white text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-weight: bold;">Quarter (col-3)</div>
+                        <div class="col-3 bg-A700 text-white text-center" style="padding: 1rem; border-radius: 4px; margin-bottom: 1rem; font-weight: bold;">Quarter (col-3)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flexbox Utilities Demo -->
+            <div class="card">
+                <h2 class="title">Flexbox Utilities</h2>
+                <p>Comprehensive flexbox utilities for layout control.</p>
+                
+                <div class="card">
+                    <h3>Flex Direction</h3>
+                    <div class="d-flex flex-row gap-2">
+                        <div class="bg-100 text-dark text-center" style="padding: 1rem; border-radius: 4px; flex: 1; font-weight: bold;">Row 1</div>
+                        <div class="bg-200 text-dark text-center" style="padding: 1rem; border-radius: 4px; flex: 1; font-weight: bold;">Row 2</div>
+                        <div class="bg-300 text-dark text-center" style="padding: 1rem; border-radius: 4px; flex: 1; font-weight: bold;">Row 3</div>
+                    </div>
+                    <div class="d-flex flex-column gap-2">
+                        <div class="bg-400 text-white text-center" style="padding: 1rem; border-radius: 4px; font-weight: bold;">Column 1</div>
+                        <div class="bg-500 text-white text-center" style="padding: 1rem; border-radius: 4px; font-weight: bold;">Column 2</div>
+                        <div class="bg-600 text-white text-center" style="padding: 1rem; border-radius: 4px; font-weight: bold;">Column 3</div>
+                    </div>
+                    
+                    <h3>Justify Content</h3>
+                    <div class="d-flex justify-content-start gap-2">
+                        <div class="bg-700 text-white text-center" style="padding: 1rem; border-radius: 4px; font-weight: bold;">Start</div>
+                        <div class="bg-700 text-white text-center" style="padding: 1rem; border-radius: 4px; font-weight: bold;">Start</div>
+                    </div>
+                    <div class="d-flex justify-content-center gap-2">
+                        <div class="bg-800 text-white text-center" style="padding: 1rem; border-radius: 4px; font-weight: bold;">Center</div>
+                        <div class="bg-800 text-white text-center" style="padding: 1rem; border-radius: 4px; font-weight: bold;">Center</div>
+                    </div>
+                    <div class="d-flex justify-content-end gap-2">
+                        <div class="bg-900 text-white text-center" style="padding: 1rem; border-radius: 4px; font-weight: bold;">End</div>
+                        <div class="bg-900 text-white text-center" style="padding: 1rem; border-radius: 4px; font-weight: bold;">End</div>
+                    </div>
+                    <div class="d-flex justify-content-between gap-2">
+                        <div class="bg-A100 text-dark text-center" style="padding: 1rem; border-radius: 4px; font-weight: bold;">Between</div>
+                        <div class="bg-A200 text-white text-center" style="padding: 1rem; border-radius: 4px; font-weight: bold;">Between</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spacing Utilities Demo -->
+            <div class="card">
+                <h2 class="title">Spacing Utilities</h2>
+                <p>EmeraldCSS v2 provides comprehensive spacing utilities for margins and padding using CSS variables.</p>
+                
+                <h3>Margin Utilities</h3>
+                <div class="card">
+                    <h4>All Sides (m-0 to m-4)</h4>
+                    <div class="d-flex gap-2">
+                        <div class="bg-500 text-white p-2 m-0" style="border-radius: 4px; font-weight: bold;">m-0</div>
+                        <div class="bg-500 text-white p-2 m-1" style="border-radius: 4px; font-weight: bold;">m-1</div>
+                        <div class="bg-500 text-white p-2 m-2" style="border-radius: 4px; font-weight: bold;">m-2</div>
+                        <div class="bg-500 text-white p-2 m-3" style="border-radius: 4px; font-weight: bold;">m-3</div>
+                        <div class="bg-500 text-white p-2 m-4" style="border-radius: 4px; font-weight: bold;">m-4</div>
+                    </div>
+                    
+                    <h4>Horizontal (mx-0 to mx-4)</h4>
+                    <div class="d-flex gap-2">
+                        <div class="bg-600 text-white p-2 mx-0" style="border-radius: 4px; font-weight: bold;">mx-0</div>
+                        <div class="bg-600 text-white p-2 mx-1" style="border-radius: 4px; font-weight: bold;">mx-1</div>
+                        <div class="bg-600 text-white p-2 mx-2" style="border-radius: 4px; font-weight: bold;">mx-2</div>
+                        <div class="bg-600 text-white p-2 mx-3" style="border-radius: 4px; font-weight: bold;">mx-3</div>
+                        <div class="bg-600 text-white p-2 mx-4" style="border-radius: 4px; font-weight: bold;">mx-4</div>
+                    </div>
+                    
+                    <h4>Vertical (my-0 to my-4)</h4>
+                    <div class="d-flex gap-2">
+                        <div class="bg-700 text-white p-2 my-0" style="border-radius: 4px; font-weight: bold;">my-0</div>
+                        <div class="bg-700 text-white p-2 my-1" style="border-radius: 4px; font-weight: bold;">my-1</div>
+                        <div class="bg-700 text-white p-2 my-2" style="border-radius: 4px; font-weight: bold;">my-2</div>
+                        <div class="bg-700 text-white p-2 my-3" style="border-radius: 4px; font-weight: bold;">my-3</div>
+                        <div class="bg-700 text-white p-2 my-4" style="border-radius: 4px; font-weight: bold;">my-4</div>
+                    </div>
+                    
+                    <h4>Individual Sides</h4>
+                    <div class="d-flex gap-2">
+                        <div class="bg-800 text-white p-2 mt-2" style="border-radius: 4px; font-weight: bold;">mt-2</div>
+                        <div class="bg-800 text-white p-2 mb-2" style="border-radius: 4px; font-weight: bold;">mb-2</div>
+                        <div class="bg-800 text-white p-2 ml-2" style="border-radius: 4px; font-weight: bold;">ml-2</div>
+                        <div class="bg-800 text-white p-2 mr-2" style="border-radius: 4px; font-weight: bold;">mr-2</div>
+                    </div>
+                </div>
+                
+                <h3>Padding Utilities</h3>
+                <div class="card">
+                    <h4>All Sides (p-0 to p-4)</h4>
+                    <div class="d-flex gap-2">
+                        <div class="bg-A100 text-dark p-0" style="border-radius: 4px; font-weight: bold;">p-0</div>
+                        <div class="bg-A100 text-dark p-1" style="border-radius: 4px; font-weight: bold;">p-1</div>
+                        <div class="bg-A100 text-dark p-2" style="border-radius: 4px; font-weight: bold;">p-2</div>
+                        <div class="bg-A100 text-dark p-3" style="border-radius: 4px; font-weight: bold;">p-3</div>
+                        <div class="bg-A100 text-dark p-4" style="border-radius: 4px; font-weight: bold;">p-4</div>
+                    </div>
+                    
+                    <h4>Horizontal (px-0 to px-4)</h4>
+                    <div class="d-flex gap-2">
+                        <div class="bg-A200 text-white px-0 py-2" style="border-radius: 4px; font-weight: bold;">px-0</div>
+                        <div class="bg-A200 text-white px-1 py-2" style="border-radius: 4px; font-weight: bold;">px-1</div>
+                        <div class="bg-A200 text-white px-2 py-2" style="border-radius: 4px; font-weight: bold;">px-2</div>
+                        <div class="bg-A200 text-white px-3 py-2" style="border-radius: 4px; font-weight: bold;">px-3</div>
+                        <div class="bg-A200 text-white px-4 py-2" style="border-radius: 4px; font-weight: bold;">px-4</div>
+                    </div>
+                    
+                    <h4>Vertical (py-0 to py-4)</h4>
+                    <div class="d-flex gap-2">
+                        <div class="bg-A400 text-white py-0 px-2" style="border-radius: 4px; font-weight: bold;">py-0</div>
+                        <div class="bg-A400 text-white py-1 px-2" style="border-radius: 4px; font-weight: bold;">py-1</div>
+                        <div class="bg-A400 text-white py-2 px-2" style="border-radius: 4px; font-weight: bold;">py-2</div>
+                        <div class="bg-A400 text-white py-3 px-2" style="border-radius: 4px; font-weight: bold;">py-3</div>
+                        <div class="bg-A400 text-white py-4 px-2" style="border-radius: 4px; font-weight: bold;">py-4</div>
+                    </div>
+                    
+                    <h4>Individual Sides</h4>
+                    <div class="d-flex gap-2">
+                        <div class="bg-A700 text-white pt-2 px-2" style="border-radius: 4px; font-weight: bold;">pt-2</div>
+                        <div class="bg-A700 text-white pb-2 px-2" style="border-radius: 4px; font-weight: bold;">pb-2</div>
+                        <div class="bg-A700 text-white pl-2 py-2" style="border-radius: 4px; font-weight: bold;">pl-2</div>
+                        <div class="bg-A700 text-white pr-2 py-2" style="border-radius: 4px; font-weight: bold;">pr-2</div>
+                    </div>
+                </div>
+                
+                <h3>Spacing Scale</h3>
+                <div class="card">
+                    <ul>
+                        <li><strong>0:</strong> 0 (no spacing)</li>
+                        <li><strong>1:</strong> 0.25rem (4px)</li>
+                        <li><strong>2:</strong> 0.5rem (8px)</li>
+                        <li><strong>3:</strong> 0.75rem (12px)</li>
+                        <li><strong>4:</strong> 1rem (16px)</li>
+                    </ul>
+                    <p><strong>Total Utilities:</strong> 60 spacing utility classes (30 margin + 30 padding)</p>
+                </div>
+            </div>
+
+            <!-- Navigation Demo -->
+            <div class="card">
+                <h2 class="title">Navigation</h2>
+                <p>EmeraldCSS v2 provides navigation components using the grid and flexbox utilities.</p>
+                
+                <div class="card">
+                    <nav class="row align-items-center" style="padding: 1rem; background-color: #f6f8fa; border-radius: 6px;">
+                        <div class="col-6">
+                            <div class="font-semibold text-primary">EmeraldCSS v2</div>
+                        </div>
+                        <div class="col-6 d-flex justify-content-end gap-4">
+                            <a href="#" class="text-dark" style="text-decoration: none;">Home</a>
+                            <a href="#" class="text-dark" style="text-decoration: none;">About</a>
+                            <a href="#" class="text-dark" style="text-decoration: none;">Contact</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Framework Comparison -->
+            <h2 class="title">Framework Comparison</h2>
+            <p>How EmeraldCSS v2 compares to Bootstrap and Tabler CSS frameworks.</p>
+            
+            <div class="card">
+                <h3>Feature Comparison</h3>
+                <ul>
+                    <li><strong>Container:</strong> Responsive containers (<code>.container</code>, <code>.container-sm</code>, <code>.container-md</code>, <code>.container-lg</code>, <code>.container-xl</code>) with CSS variables vs Bootstrap's responsive containers</li>
+                    <li><strong>Grid System:</strong> 12-column grid with CSS variables and responsive breakpoints vs Bootstrap's standard grid</li>
+                    <li><strong>Flexbox:</strong> <code>.d-flex</code>, <code>.flex-1</code>, <code>.justify-content-*</code>, <code>.align-items-*</code> vs Bootstrap's flexbox utilities</li>
+                    <li><strong>Gap Utilities:</strong> <code>.gap-1</code> to <code>.gap-8</code> with responsive variants (<code>.gap-sm-*</code>, <code>.gap-md-*</code>, <code>.gap-lg-*</code>)</li>
+                    <li><strong>Colors:</strong> CSS custom properties with semantic tokens and modular palette system vs theme colors</li>
+                    <li><strong>Typography:</strong> CSS custom properties for all values with utility classes vs utility-only approach</li>
+                    <li><strong>Cards:</strong> <code>.card</code> (minimal, consistent) with semantic HTML support vs comprehensive card systems</li>
+                    <li><strong>Responsive:</strong> Mobile-first with CSS variables and responsive utilities vs mobile-first approach</li>
+                    <li><strong>Spacing:</strong> Comprehensive margin/padding utilities (<code>.m-0</code> to <code>.m-4</code>, <code>.p-0</code> to <code>.p-4</code>) with directional variants</li>
+                    <li><strong>Components:</strong> Form controls, buttons, modals with CSS variables vs pre-styled components</li>
+                </ul>
+            </div>
+        </section>
+        </div>
+    </main>
+
+    <!-- Palette Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h5 class="text-white mb-3">Available Palettes</h5>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h6 class="text-muted mb-2">Material Colors</h6>
+                            <div id="material-palette-links" class="d-flex flex-column gap-1">
+                                <!-- Material palette links will be generated here -->
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h6 class="text-muted mb-2">Brands</h6>
+                            <div id="brand-palette-links" class="d-flex flex-column gap-1">
+                                <!-- Brand palette links will be generated here -->
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h6 class="text-muted mb-2">Custom</h6>
+                            <div id="custom-palette-links" class="d-flex flex-column gap-1">
+                                <!-- Custom palette links will be generated here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Palette Editor Modal -->
+    <div id="palette-editor-modal" class="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 1000;">
+        <div class="modal-dialog" style="position: relative; top: 50%; transform: translateY(-50%); max-width: 800px; margin: 0 auto; background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <div class="modal-content">
+                <div class="modal-header" style="padding: 1rem; border-bottom: 1px solid #e9ecef; display: flex; justify-content: space-between; align-items: center;">
+                    <h5 class="modal-title" style="margin: 0;">Palette Editor</h5>
+                    <button type="button" class="btn-close" style="background: none; border: none; font-size: 1.5rem; cursor: pointer;">&times;</button>
+                </div>
+                <div class="modal-body" style="padding: 1rem;">
+                    <div class="mb-3">
+                        <label for="palette-name" class="form-label">Palette Name</label>
+                        <input type="text" id="palette-name" class="form-control" placeholder="Enter palette name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Color Palette</label>
+                        <div id="color-palette-editor">
+                            <!-- Color items will be generated here -->
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="padding: 1rem; border-top: 1px solid #e9ecef; display: flex; justify-content: flex-end; gap: 0.5rem;">
+                    <button type="button" class="btn btn-secondary">Cancel</button>
+                    <button type="button" id="save-palette-btn" class="btn btn-primary">Save Palette</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple DOM-based palette switching (no external dependencies)
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize palette manager
+            window.paletteManager = new PaletteManager();
+        });
+
+        // Simple DOM-based Palette Management System
+        class PaletteManager {
+            constructor() {
+                this.paletteSelector = document.getElementById('palette-selector');
+                this.paletteLink = document.getElementById('link-palette');
+                this.editorBtn = document.getElementById('palette-editor-btn');
+                this.modal = document.getElementById('palette-editor-modal');
+                this.paletteName = document.getElementById('palette-name');
+                this.colorEditor = document.getElementById('color-palette-editor');
+                this.saveBtn = document.getElementById('save-palette-btn');
+                
+                this.init();
+            }
+
+            async init() {
+                await this.loadPalettes();
+                this.setupEventListeners();
+                this.generateColorEditor();
+                this.generatePaletteLinks();
+            }
+
+            async loadPalettes() {
+                // For static deployment, use fallback palettes
+                this.addFallbackPalettes();
+            }
+
+            addFallbackPalettes() {
+                const commonPalettes = [
+                    { filename: 'emerald-palette-red.css', name: 'Red' },
+                    { filename: 'emerald-palette-green.css', name: 'Green' },
+                    { filename: 'emerald-palette-purple.css', name: 'Purple' },
+                    { filename: 'emerald-palette-orange.css', name: 'Orange' },
+                    { filename: 'emerald-palette-pink.css', name: 'Pink' },
+                    { filename: 'emerald-palette-teal.css', name: 'Teal' },
+                    { filename: 'emerald-palette-indigo.css', name: 'Indigo' },
+                    { filename: 'emerald-palette-github.css', name: 'GitHub' },
+                    { filename: 'emerald-palette-twitter.css', name: 'Twitter' },
+                    { filename: 'emerald-palette-youtube.css', name: 'YouTube' },
+                    { filename: 'emerald-palette-windi-pink.css', name: 'Windi Pink' },
+                    { filename: 'emerald-palette-windi-rose.css', name: 'Windi Rose' },
+                    { filename: 'emerald-palette-windi-red.css', name: 'Windi Red' },
+                    { filename: 'emerald-palette-windi-orange.css', name: 'Windi Orange' },
+                    { filename: 'emerald-palette-windi-yellow.css', name: 'Windi Yellow' },
+                    { filename: 'emerald-palette-windi-amber.css', name: 'Windi Amber' },
+                    { filename: 'emerald-palette-windi-lime.css', name: 'Windi Lime' },
+                    { filename: 'emerald-palette-windi-emerald.css', name: 'Windi Emerald' },
+                    { filename: 'emerald-palette-windi-cyan.css', name: 'Windi Cyan' },
+                    { filename: 'emerald-palette-windi-sky.css', name: 'Windi Sky' },
+                    { filename: 'emerald-palette-windi-blue.css', name: 'Windi Blue' },
+                    { filename: 'emerald-palette-windi-indigo.css', name: 'Windi Indigo' },
+                    { filename: 'emerald-palette-windi-purple.css', name: 'Windi Purple' },
+                    { filename: 'emerald-palette-windi-violet.css', name: 'Windi Violet' },
+                    { filename: 'emerald-palette-windi-fuchsia.css', name: 'Windi Fuchsia' },
+                    { filename: 'emerald-palette-windi-gray.css', name: 'Windi Gray' },
+                    { filename: 'emerald-palette-windi-slate.css', name: 'Windi Slate' },
+                    { filename: 'emerald-palette-windi-stone.css', name: 'Windi Stone' },
+                    { filename: 'emerald-palette-windi-neutral.css', name: 'Windi Neutral' },
+                    { filename: 'emerald-palette-windi-zinc.css', name: 'Windi Zinc' },
+                    { filename: 'emerald-palette-windi-light.css', name: 'Windi Light' },
+                    { filename: 'emerald-palette-windi-dark.css', name: 'Windi Dark' }
+                ];
+
+                commonPalettes.forEach(palette => {
+                    const option = document.createElement('option');
+                    option.value = palette.filename;
+                    option.textContent = palette.name;
+                    this.paletteSelector.appendChild(option);
+                });
+            }
+
+            setupEventListeners() {
+                // Watch for palette changes
+                this.paletteSelector.addEventListener('change', (e) => {
+                    this.switchPalette(e.target.value);
+                });
+
+                // Watch for editor button clicks
+                this.editorBtn.addEventListener('click', () => {
+                    this.openEditor();
+                });
+
+                // Watch for save button clicks
+                this.saveBtn.addEventListener('click', () => {
+                    this.savePalette();
+                });
+
+                // Watch for modal close events
+                document.querySelector('.btn-close').addEventListener('click', () => {
+                    this.closeEditor();
+                });
+
+                document.querySelectorAll('[data-bs-dismiss="modal"]').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        this.closeEditor();
+                    });
+                });
+            }
+
+            switchPalette(filename) {
+                if (filename) {
+                    // Update the href attribute of the palette link
+                    this.paletteLink.href = `/palettes/${filename}`;
+                    console.log('Switched to palette:', filename);
+                } else {
+                    // Remove the href to use default palette
+                    this.paletteLink.href = '';
+                    console.log('Switched to default palette');
+                }
+            }
+
+            openEditor() {
+                this.modal.style.display = 'block';
+                this.modal.classList.add('show');
+                this.paletteName.value = '';
+                this.resetColorEditor();
+            }
+
+            closeEditor() {
+                this.modal.style.display = 'none';
+                this.modal.classList.remove('show');
+            }
+
+            generateColorEditor() {
+                const colorVars = [
+                    { name: 'Brand Color', var: '--brand-color', default: '#0969da' },
+                    { name: 'Body Background', var: '--body-bg', default: '#f1f5f9' },
+                    { name: 'Primary', var: '--color-primary', default: '#0969da' },
+                    { name: 'Secondary', var: '--color-secondary', default: '#6f42c1' },
+                    { name: 'Success', var: '--color-success', default: '#1a7f37' },
+                    { name: 'Danger', var: '--color-danger', default: '#cf222e' },
+                    { name: 'Warning', var: '--color-warning', default: '#9a6700' },
+                    { name: 'Info', var: '--color-info', default: '#17a2b8' },
+                    { name: 'Muted', var: '--color-muted', default: '#656d76' },
+                    { name: '50', var: '--color-50', default: '#e3f2fd' },
+                    { name: '100', var: '--color-100', default: '#bbdefb' },
+                    { name: '200', var: '--color-200', default: '#90caf9' },
+                    { name: '300', var: '--color-300', default: '#64b5f6' },
+                    { name: '400', var: '--color-400', default: '#42a5f5' },
+                    { name: '500', var: '--color-500', default: '#2196f3' },
+                    { name: '600', var: '--color-600', default: '#1e88e5' },
+                    { name: '700', var: '--color-700', default: '#1976d2' },
+                    { name: '800', var: '--color-800', default: '#1565c0' },
+                    { name: '900', var: '--color-900', default: '#0d47a1' },
+                    { name: 'A100', var: '--color-A100', default: '#82b1ff' },
+                    { name: 'A200', var: '--color-A200', default: '#448aff' },
+                    { name: 'A400', var: '--color-A400', default: '#2979ff' },
+                    { name: 'A700', var: '--color-A700', default: '#2962ff' }
+                ];
+
+                // Get current CSS variable values
+                const getCurrentValue = (varName) => {
+                    return getComputedStyle(document.documentElement).getPropertyValue(varName).trim() || colorVars.find(c => c.var === varName)?.default || '#000000';
+                };
+
+                this.colorEditor.innerHTML = `
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h6>Brand & Semantic Colors</h6>
+                            <div id="brand-colors"></div>
+                        </div>
+                        <div class="col-md-4">
+                            <h6>Material Design Shades</h6>
+                            <div id="material-colors"></div>
+                        </div>
+                        <div class="col-md-4">
+                            <h6>Accent Colors</h6>
+                            <div id="accent-colors"></div>
+                        </div>
+                    </div>
+                `;
+
+                // Brand & Semantic Colors
+                const brandColors = colorVars.slice(0, 9);
+                const brandContainer = document.getElementById('brand-colors');
+                brandColors.forEach(color => {
+                    const currentValue = getCurrentValue(color.var);
+                    const colorItem = document.createElement('div');
+                    colorItem.className = 'color-item d-flex align-items-center mb-2';
+                    colorItem.innerHTML = `
+                        <div class="color-preview" style="width: 30px; height: 30px; background-color: ${currentValue}; border: 1px solid #ccc; border-radius: 4px; margin-right: 10px;"></div>
+                        <div class="flex-grow-1">
+                            <label class="form-label mb-0">${color.name}</label>
+                            <input type="color" class="form-control form-control-color" data-var="${color.var}" value="${currentValue}" style="width: 100px;">
+                        </div>
+                    `;
+                    brandContainer.appendChild(colorItem);
+                });
+
+                // Material Design Shades
+                const materialColors = colorVars.slice(9, 19);
+                const materialContainer = document.getElementById('material-colors');
+                materialColors.forEach(color => {
+                    const currentValue = getCurrentValue(color.var);
+                    const colorItem = document.createElement('div');
+                    colorItem.className = 'color-item d-flex align-items-center mb-2';
+                    colorItem.innerHTML = `
+                        <div class="color-preview" style="width: 30px; height: 30px; background-color: ${currentValue}; border: 1px solid #ccc; border-radius: 4px; margin-right: 10px;"></div>
+                        <div class="flex-grow-1">
+                            <label class="form-label mb-0">${color.name}</label>
+                            <input type="color" class="form-control form-control-color" data-var="${color.var}" value="${currentValue}" style="width: 100px;">
+                        </div>
+                    `;
+                    materialContainer.appendChild(colorItem);
+                });
+
+                // Accent Colors
+                const accentColors = colorVars.slice(19);
+                const accentContainer = document.getElementById('accent-colors');
+                accentColors.forEach(color => {
+                    const currentValue = getCurrentValue(color.var);
+                    const colorItem = document.createElement('div');
+                    colorItem.className = 'color-item d-flex align-items-center mb-2';
+                    colorItem.innerHTML = `
+                        <div class="color-preview" style="width: 30px; height: 30px; background-color: ${currentValue}; border: 1px solid #ccc; border-radius: 4px; margin-right: 10px;"></div>
+                        <div class="flex-grow-1">
+                            <label class="form-label mb-0">${color.name}</label>
+                            <input type="color" class="form-control form-control-color" data-var="${color.var}" value="${currentValue}" style="width: 100px;">
+                        </div>
+                    `;
+                    accentContainer.appendChild(colorItem);
+                });
+
+                // Add event listeners for color picker updates
+                const colorInputs = this.colorEditor.querySelectorAll('input[type="color"]');
+                colorInputs.forEach(input => {
+                    input.addEventListener('input', (e) => {
+                        const colorValue = e.target.value;
+                        const colorPreview = e.target.closest('.color-item').querySelector('.color-preview');
+                        colorPreview.style.backgroundColor = colorValue;
+                    });
+                });
+            }
+
+            generatePaletteLinks() {
+                const materialContainer = document.getElementById('material-palette-links');
+                const brandContainer = document.getElementById('brand-palette-links');
+                const customContainer = document.getElementById('custom-palette-links');
+                
+                if (!materialContainer || !brandContainer || !customContainer) return;
+
+                // Clear existing links
+                materialContainer.innerHTML = '';
+                brandContainer.innerHTML = '';
+                customContainer.innerHTML = '';
+
+                // Add default option to material
+                const defaultLink = document.createElement('a');
+                defaultLink.href = '#';
+                defaultLink.className = 'footer-link underline-dashed';
+                defaultLink.textContent = 'Default (Blue)';
+                defaultLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    this.switchPalette('');
+                    this.paletteSelector.value = '';
+                });
+                materialContainer.appendChild(defaultLink);
+
+                // Add palette options from selector
+                const options = this.paletteSelector.querySelectorAll('option');
+                options.forEach(option => {
+                    if (option.value) {
+                        const link = document.createElement('a');
+                        link.href = '#';
+                        link.className = 'footer-link underline-dashed';
+                        link.textContent = option.textContent;
+                        link.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            this.switchPalette(option.value);
+                            this.paletteSelector.value = option.value;
+                        });
+
+                        // Categorize palettes
+                        const filename = option.value.toLowerCase();
+                        if (filename.includes('custom-palette')) {
+                            customContainer.appendChild(link);
+                        } else if (filename.includes('github') || filename.includes('twitter') || 
+                                  filename.includes('youtube') || filename.includes('instagram') || 
+                                  filename.includes('facebook') || filename.includes('linkedin') || 
+                                  filename.includes('google') || filename.includes('apple') || 
+                                  filename.includes('azure') || filename.includes('tabler')) {
+                            brandContainer.appendChild(link);
+                        } else {
+                            materialContainer.appendChild(link);
+                        }
+                    }
+                });
+            }
+
+            resetColorEditor() {
+                // Regenerate the color editor with current values
+                this.generateColorEditor();
+            }
+
+            getDefaultColor(varName) {
+                const defaults = {
+                    '--brand-color': '#0969da',
+                    '--body-bg': '#f1f5f9',
+                    '--color-primary': '#0969da',
+                    '--color-secondary': '#6f42c1',
+                    '--color-success': '#1a7f37',
+                    '--color-danger': '#cf222e',
+                    '--color-warning': '#9a6700',
+                    '--color-info': '#17a2b8',
+                    '--color-muted': '#656d76',
+                    '--color-50': '#e3f2fd',
+                    '--color-100': '#bbdefb',
+                    '--color-200': '#90caf9',
+                    '--color-300': '#64b5f6',
+                    '--color-400': '#42a5f5',
+                    '--color-500': '#2196f3',
+                    '--color-600': '#1e88e5',
+                    '--color-700': '#1976d2',
+                    '--color-800': '#1565c0',
+                    '--color-900': '#0d47a1',
+                    '--color-A100': '#82b1ff',
+                    '--color-A200': '#448aff',
+                    '--color-A400': '#2979ff',
+                    '--color-A700': '#2962ff'
+                };
+                return defaults[varName] || '#000000';
+            }
+
+            async savePalette() {
+                // Save functionality disabled for static deployment
+                alert('Palette editor is in demo mode. Save functionality requires server API.');
+                this.closeEditor();
+            }
+        }
+
+    </script>
+</body>
+</html>

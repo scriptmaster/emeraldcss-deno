@@ -1,0 +1,42 @@
+/* EmeraldCSS v2 - Windi Cyan Brand Palette */
+/* Include this file after emerald-v2.css to switch to Windi cyan theme */
+
+:root {
+    /* Brand and Body Variables */
+    --brand-color: #06b6d4;
+    --body-bg: #ecfeff;
+    --body-bg-rgb: 236, 254, 255;
+    
+    /* Semantic Colors */
+    --color-primary: var(--brand-color);
+    --color-secondary: #0e7490;
+    --color-success: #10b981;
+    --color-danger: #ef4444;
+    --color-warning: #f59e0b;
+    --color-info: #3b82f6;
+    --color-muted: #155e75;
+    
+    /* Windi Cyan Brand Palette */
+    --color-50: #ecfeff;
+    --color-100: #cffafe;
+    --color-200: #a5f3fc;
+    --color-300: #67e8f9;
+    --color-400: #22d3ee;
+    --color-500: #06b6d4;
+    --color-600: #0891b2;
+    --color-700: #0e7490;
+    --color-800: #155e75;
+    --color-900: #164e63;
+    --color-A100: #cffafe;
+    --color-A200: #67e8f9;
+    --color-A400: #06b6d4;
+    --color-A700: #164e63;
+}
+
+/* Windi Cyan specific overrides */
+.navbar-brand, main > header > a, main > header > div > a {
+    background-color: var(--color-600);
+    padding-left: var(--rem-3);
+    padding-right: var(--rem-3);
+    border-radius: var(--border-radius);
+}

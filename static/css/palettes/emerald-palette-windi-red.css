@@ -1,0 +1,42 @@
+/* EmeraldCSS v2 - Windi Red Brand Palette */
+/* Include this file after emerald-v2.css to switch to Windi red theme */
+
+:root {
+    /* Brand and Body Variables */
+    --brand-color: #ef4444;
+    --body-bg: #fef2f2;
+    --body-bg-rgb: 254, 242, 242;
+    
+    /* Semantic Colors */
+    --color-primary: var(--brand-color);
+    --color-secondary: #b91c1c;
+    --color-success: #10b981;
+    --color-danger: #dc2626;
+    --color-warning: #f59e0b;
+    --color-info: #3b82f6;
+    --color-muted: #991b1b;
+    
+    /* Windi Red Brand Palette */
+    --color-50: #fef2f2;
+    --color-100: #fee2e2;
+    --color-200: #fecaca;
+    --color-300: #fca5a5;
+    --color-400: #f87171;
+    --color-500: #ef4444;
+    --color-600: #dc2626;
+    --color-700: #b91c1c;
+    --color-800: #991b1b;
+    --color-900: #7f1d1d;
+    --color-A100: #fee2e2;
+    --color-A200: #fca5a5;
+    --color-A400: #ef4444;
+    --color-A700: #7f1d1d;
+}
+
+/* Windi Red specific overrides */
+.navbar-brand, main > header > a, main > header > div > a {
+    background-color: var(--color-600);
+    padding-left: var(--rem-3);
+    padding-right: var(--rem-3);
+    border-radius: var(--border-radius);
+}
