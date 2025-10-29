@@ -76,8 +76,8 @@ button { border-radius: 0; }
     --color-border-form: var(--color-primary);
     --color-border-form-focus: var(--color-primary);
     --color-border-form-disabled: var(--color-primary);
-    --color-box-shadow: var(--color-primary);
-    --box-shadow-blur: 1rem;
+    --color-box-shadow: var(--color-100);
+    --box-shadow-blur: 0.3rem;
     --box-shadow-spread: 0.25rem;
 
     --opacity-form: 0.8;
