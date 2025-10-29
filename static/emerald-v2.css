@@ -724,7 +724,7 @@ ul.dropdown {
 
 /* Title */
 .title {
-    border-bottom: 1px solid var(--color-primary);
+    border-bottom: 1px solid var(--color-border-1);
     padding-bottom: var(--rem-2);
     margin-bottom: var(--content-padding);
 }
