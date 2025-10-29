@@ -995,7 +995,7 @@ label { margin-right: var(--rem-2); }
     cursor: default;
 }
 
-.form-check { display: flex; justify-content: center; align-items: center; }
+.form-check { display: flex; align-items: center; }
 .form-check-input { margin: var(--rem-2) var(--rem-2); }
 .form-check-label { font-size: var(--font-size-sm); }
 
