@@ -950,7 +950,7 @@ ul.dropdown {
     color: var(--color-dark);
     background-color: var(--color-white);
     background-clip: padding-box;
-    border: 1px solid var(--color-border-2);
+    border: 1px solid var(--color-primary);
     border-radius: var(--border-radius);
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
