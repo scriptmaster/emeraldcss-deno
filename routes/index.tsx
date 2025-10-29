@@ -261,9 +261,10 @@ export default define.page(function Home(ctx: any) {
       {/* Text Utilities Demo */}
       <div class="card">
         <h2 class="title">Text Utilities</h2>
-        <p>EmeraldCSS v2 provides utility classes for text styling and font weights.</p>
+        <p>EmeraldCSS v2 provides text utility classes for font-sizes and font weights.</p>
         
         <div class="card">
+          <h4>font-size</h4>
           <div class="text-xs">Extra Small Text (.text-xs)</div>
           <div class="text-sm">Small Text (.text-sm)</div>
           <div class="text-base">Base Text (.text-base)</div>
@@ -272,7 +273,10 @@ export default define.page(function Home(ctx: any) {
           <div class="text-2xl">2XL Text (.text-2xl)</div>
           <div class="text-3xl">3XL Text (.text-3xl)</div>
           <div class="text-4xl">4XL Text (.text-4xl)</div>
-          
+        </div>
+
+        <div class="card">
+          <h4>font-weight</h4>
           <div class="font-normal">Normal Weight (.font-normal)</div>
           <div class="font-medium">Medium Weight (.font-medium)</div>
           <div class="font-semibold">Semibold Weight (.font-semibold)</div>
