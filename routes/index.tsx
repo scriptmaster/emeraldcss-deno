@@ -392,6 +392,254 @@ export default define.page(function Home(ctx: any) {
 <!-- Override with Green Palette -->
 <link rel="stylesheet" href="/css/palettes/emerald-palette-green.css">`}</code></pre>
         </div>
+        
+        <h4>Available Palettes (56 Total)</h4>
+        <div class="card">
+          <p>Complete Material Design color palette collection plus popular brand palettes and Windi CSS palettes - each palette includes 14 shades (50-900 + A100-A700) plus brand-specific body backgrounds and semantic colors:</p>
+          <div class="row">
+            <div class="col-6 col-md-3">
+              <div class="card" style="border: 2px solid var(--color-500);">
+                <h5 class="text-500">Blue (Default)</h5>
+                <p class="text-muted text-sm">Included in main CSS</p>
+                <div class="bg-500 text-white text-center" style="padding: 0.5rem; border-radius: 4px;">Primary Blue</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card" style="border: 2px solid #f44336;">
+                <h5 style="color: #f44336;">Red</h5>
+                <p class="text-muted text-sm">emerald-palette-red.css</p>
+                <div style="background-color: #f44336; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Primary Red</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card" style="border: 2px solid #e91e63;">
+                <h5 style="color: #e91e63;">Pink</h5>
+                <p class="text-muted text-sm">emerald-palette-pink.css</p>
+                <div style="background-color: #e91e63; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Primary Pink</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card" style="border: 2px solid #9c27b0;">
+                <h5 style="color: #9c27b0;">Purple</h5>
+                <p class="text-muted text-sm">emerald-palette-purple.css</p>
+                <div style="background-color: #9c27b0; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Primary Purple</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card" style="border: 2px solid #673ab7;">
+                <h5 style="color: #673ab7;">Deep Purple</h5>
+                <p class="text-muted text-sm">emerald-palette-deep-purple.css</p>
+                <div style="background-color: #673ab7; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Deep Purple</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card" style="border: 2px solid #3f51b5;">
+                <h5 style="color: #3f51b5;">Indigo</h5>
+                <p class="text-muted text-sm">emerald-palette-indigo.css</p>
+                <div style="background-color: #3f51b5; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Primary Indigo</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card" style="border: 2px solid #03a9f4;">
+                <h5 style="color: #03a9f4;">Light Blue</h5>
+                <p class="text-muted text-sm">emerald-palette-light-blue.css</p>
+                <div style="background-color: #03a9f4; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Light Blue</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card" style="border: 2px solid #00bcd4;">
+                <h5 style="color: #00bcd4;">Cyan</h5>
+                <p class="text-muted text-sm">emerald-palette-cyan.css</p>
+                <div style="background-color: #00bcd4; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Primary Cyan</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card" style="border: 2px solid #009688;">
+                <h5 style="color: #009688;">Teal</h5>
+                <p class="text-muted text-sm">emerald-palette-teal.css</p>
+                <div style="background-color: #009688; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Primary Teal</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card" style="border: 2px solid #4caf50;">
+                <h5 style="color: #4caf50;">Green</h5>
+                <p class="text-muted text-sm">emerald-palette-green.css</p>
+                <div style="background-color: #4caf50; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Primary Green</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card" style="border: 2px solid #8bc34a;">
+                <h5 style="color: #8bc34a;">Light Green</h5>
+                <p class="text-muted text-sm">emerald-palette-light-green.css</p>
+                <div style="background-color: #8bc34a; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Light Green</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card" style="border: 2px solid #cddc39;">
+                <h5 style="color: #cddc39;">Lime</h5>
+                <p class="text-muted text-sm">emerald-palette-lime.css</p>
+                <div style="background-color: #cddc39; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Primary Lime</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card" style="border: 2px solid #ffeb3b;">
+                <h5 style="color: #ffeb3b;">Yellow</h5>
+                <p class="text-muted text-sm">emerald-palette-yellow.css</p>
+                <div style="background-color: #ffeb3b; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Primary Yellow</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card" style="border: 2px solid #ffc107;">
+                <h5 style="color: #ffc107;">Amber</h5>
+                <p class="text-muted text-sm">emerald-palette-amber.css</p>
+                <div style="background-color: #ffc107; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Primary Amber</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card" style="border: 2px solid #ff9800;">
+                <h5 style="color: #ff9800;">Orange</h5>
+                <p class="text-muted text-sm">emerald-palette-orange.css</p>
+                <div style="background-color: #ff9800; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Primary Orange</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card" style="border: 2px solid #ff5722;">
+                <h5 style="color: #ff5722;">Deep Orange</h5>
+                <p class="text-muted text-sm">emerald-palette-deep-orange.css</p>
+                <div style="background-color: #ff5722; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Deep Orange</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card" style="border: 2px solid #795548;">
+                <h5 style="color: #795548;">Brown</h5>
+                <p class="text-muted text-sm">emerald-palette-brown.css</p>
+                <div style="background-color: #795548; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Primary Brown</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card" style="border: 2px solid #9e9e9e;">
+                <h5 style="color: #9e9e9e;">Grey</h5>
+                <p class="text-muted text-sm">emerald-palette-grey.css</p>
+                <div style="background-color: #9e9e9e; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Primary Grey</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card" style="border: 2px solid #607d8b;">
+                <h5 style="color: #607d8b;">Blue Grey</h5>
+                <p class="text-muted text-sm">emerald-palette-blue-grey.css</p>
+                <div style="background-color: #607d8b; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Blue Grey</div>
+              </div>
+            </div>
+          </div>
+          
+          <h4>Brand Palettes</h4>
+          <p>Popular brand color palettes with authentic brand colors and matching body backgrounds:</p>
+          <div class="row">
+            <div class="col-6 col-md-3">
+              <div class="card" style="border: 2px solid #181717;">
+                <h5 style="color: #181717;">GitHub</h5>
+                <p class="text-muted text-sm">emerald-palette-github.css</p>
+                <div style="background-color: #181717; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">GitHub</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card bg-dark" style="border: 2px solid #f0f6fc;">
+                <h5 class="text-white">GitHub Dark</h5>
+                <p class="text-muted text-sm">emerald-palette-github-dark.css</p>
+                <div style="background-color: #f0f6fc; color: #0d1117; text-align: center; padding: 0.5rem; border-radius: 4px;">GitHub Dark</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card" style="border: 2px solid #0078d4;">
+                <h5 style="color: #0078d4;">Azure</h5>
+                <p class="text-muted text-sm">emerald-palette-azure.css</p>
+                <div style="background-color: #0078d4; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Azure</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card" style="border: 2px solid #ff0000;">
+                <h5 style="color: #ff0000;">YouTube</h5>
+                <p class="text-muted text-sm">emerald-palette-youtube.css</p>
+                <div style="background-color: #ff0000; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">YouTube</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card" style="border: 2px solid #1da1f2;">
+                <h5 style="color: #1da1f2;">Twitter</h5>
+                <p class="text-muted text-sm">emerald-palette-twitter.css</p>
+                <div style="background-color: #1da1f2; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Twitter</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card" style="border: 2px solid #e4405f;">
+                <h5 style="color: #e4405f;">Instagram</h5>
+                <p class="text-muted text-sm">emerald-palette-instagram.css</p>
+                <div style="background-color: #e4405f; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Instagram</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card" style="border: 2px solid #007aff;">
+                <h5 style="color: #007aff;">Apple</h5>
+                <p class="text-muted text-sm">emerald-palette-apple.css</p>
+                <div style="background-color: #007aff; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Apple</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card" style="border: 2px solid #206bc4;">
+                <h5 style="color: #206bc4;">Tabler</h5>
+                <p class="text-muted text-sm">emerald-palette-tabler.css</p>
+                <div style="background-color: #206bc4; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Tabler</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card" style="border: 2px solid #1877F2;">
+                <h5 style="color: #1877F2;">Facebook</h5>
+                <p class="text-muted text-sm">emerald-palette-facebook.css</p>
+                <div style="background-color: #1877F2; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Facebook</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card" style="border: 2px solid #0a66c2;">
+                <h5 style="color: #0a66c2;">LinkedIn</h5>
+                <p class="text-muted text-sm">emerald-palette-linkedin.css</p>
+                <div style="background-color: #0a66c2; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">LinkedIn</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card" style="border: 2px solid #dc4e41;">
+                <h5 style="color: #dc4e41;">Google</h5>
+                <p class="text-muted text-sm">emerald-palette-google.css</p>
+                <div style="background-color: #dc4e41; color: white; text-align: center; padding: 0.5rem; border-radius: 4px;">Google</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <h4>Generic Utility Classes</h4>
+        <div class="card">
+          <p>All palettes use the same utility class names, making it easy to switch between palettes:</p>
+          <h5>Background Colors</h5>
+          <p><code>.bg-50</code> to <code>.bg-900</code> and <code>.bg-A100</code> to <code>.bg-A700</code></p>
+          
+          <h5>Text Colors</h5>
+          <p><code>.text-50</code> to <code>.text-900</code> and <code>.text-A100</code> to <code>.text-A700</code></p>
+          
+          <h5>Usage Examples</h5>
+          <pre><code>{`<!-- These classes work with any palette -->
+<div class="bg-500 text-white">Primary Color</div>
+<div class="bg-100 text-900">Light Background</div>
+<div class="bg-A200 text-white">Accent Color</div>`}</code></pre>
+        </div>
+        
+        <h4>File Size Benefits</h4>
+        <div class="card">
+          <ul>
+            <li><strong>Main CSS:</strong> 27.0KB raw, 5.6KB gzipped (22% smaller than traditional approach)</li>
+            <li><strong>Palette Files:</strong> ~500 bytes each (only load what you need)</li>
+            <li><strong>Total Savings:</strong> 6KB raw, 1KB gzipped compared to including all palettes</li>
+            <li><strong>Modular:</strong> Load only the palette you need for your project</li>
+          </ul>
+        </div>
       </div>
 
       {/* Container System Demo */}
@@ -563,6 +811,224 @@ export default define.page(function Home(ctx: any) {
             <li><strong>4:</strong> 1rem (16px)</li>
           </ul>
           <p><strong>Total Utilities:</strong> 60 spacing utility classes (30 margin + 30 padding)</p>
+        </div>
+      </div>
+
+      {/* Form Demo */}
+      <div class="card">
+        <h2 class="title">Form Controls</h2>
+        <p>EmeraldCSS v2 provides comprehensive form styling with utility classes for all form elements.</p>
+        
+        <h3>Form Elements Comparison</h3>
+        <div class="card">
+          <h4>Without Form Classes (Default Browser Styling)</h4>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label>Default Input</label>
+                <input type="text" placeholder="Default input styling" />
+              </div>
+              <div class="mb-3">
+                <label>Default Textarea</label>
+                <textarea placeholder="Default textarea styling"></textarea>
+              </div>
+              <div class="mb-3">
+                <label>Default Select</label>
+                <select>
+                  <option>Default option 1</option>
+                  <option>Default option 2</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label>Default Checkbox</label>
+                <input type="checkbox" /> Checkbox option
+              </div>
+              <div class="mb-3">
+                <label>Default Radio</label>
+                <input type="radio" name="radio1" /> Radio option 1<br />
+                <input type="radio" name="radio1" /> Radio option 2
+              </div>
+              <div class="mb-3">
+                <label>Default Button</label>
+                <button>Default Button</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <h4>With Form Classes (EmeraldCSS Styling)</h4>
+        <div class="card">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label class="form-label">Form Label</label>
+                <input type="text" class="form-control" placeholder="Styled input with form-control" />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Textarea</label>
+                <textarea class="form-control" placeholder="Styled textarea with form-control" rows="3"></textarea>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Select</label>
+                <select class="form-select">
+                  <option>Styled option 1</option>
+                  <option>Styled option 2</option>
+                  <option>Styled option 3</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">File Input</label>
+                <input type="file" class="form-control" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label class="form-label">Checkboxes</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="check1" />
+                  <label class="form-check-label" for="check1">Checkbox option 1</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="check2" />
+                  <label class="form-check-label" for="check2">Checkbox option 2</label>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Radio Buttons</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="radio2" id="radio1" />
+                  <label class="form-check-label" for="radio1">Radio option 1</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="radio2" id="radio2" />
+                  <label class="form-check-label" for="radio2">Radio option 2</label>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Switch</label>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" id="switch1" />
+                  <label class="form-check-label" for="switch1">Toggle switch</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <h3>Button Styles</h3>
+        <div class="card">
+          <h4>Button Variants</h4>
+          <div class="mb-3">
+            <button class="btn btn-primary">Primary</button>
+            <button class="btn btn-secondary">Secondary</button>
+            <button class="btn btn-success">Success</button>
+            <button class="btn btn-danger">Danger</button>
+            <button class="btn btn-warning">Warning</button>
+            <button class="btn btn-info">Info</button>
+            <button class="btn btn-light">Light</button>
+            <button class="btn btn-dark">Dark</button>
+            <button class="btn btn-link">Link</button>
+          </div>
+          
+          <h4>Button Outlines</h4>
+          <div class="mb-3">
+            <button class="btn btn-outline-primary">Primary Outline</button>
+            <button class="btn btn-outline-secondary">Secondary Outline</button>
+            <button class="btn btn-outline-success">Success Outline</button>
+            <button class="btn btn-outline-danger">Danger Outline</button>
+            <button class="btn btn-outline-warning">Warning Outline</button>
+            <button class="btn btn-outline-info">Info Outline</button>
+            <button class="btn btn-outline-light">Light Outline</button>
+            <button class="btn btn-outline-dark">Dark Outline</button>
+          </div>
+          
+          <h4>Button Sizes</h4>
+          <div class="mb-3">
+            <button class="btn btn-primary btn-sm">Small Button</button>
+            <button class="btn btn-primary">Normal Button</button>
+            <button class="btn btn-primary btn-lg">Large Button</button>
+          </div>
+          
+          <h4>Button States</h4>
+          <div class="mb-3">
+            <button class="btn btn-primary">Normal</button>
+            <button class="btn btn-primary" disabled>Disabled</button>
+            <button class="btn btn-primary active">Active</button>
+          </div>
+        </div>
+        
+        <h3>Form Layout Examples</h3>
+        <div class="card">
+          <h4>Horizontal Form</h4>
+          <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" placeholder="Enter email" />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" placeholder="Enter password" />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-sm-10 offset-sm-2">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="remember" />
+                <label class="form-check-label" for="remember">Remember me</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-10 offset-sm-2">
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="button" class="btn btn-secondary">Cancel</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <h4>Form Validation States</h4>
+          <div class="mb-3">
+            <label class="form-label">Valid Input</label>
+            <input type="text" class="form-control is-valid" value="Valid input" />
+            <div class="valid-feedback">Looks good!</div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Invalid Input</label>
+            <input type="text" class="form-control is-invalid" value="Invalid input" />
+            <div class="invalid-feedback">Please provide a valid input.</div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Select with Validation</label>
+            <select class="form-select is-invalid">
+              <option>Choose...</option>
+              <option>Option 1</option>
+              <option>Option 2</option>
+            </select>
+            <div class="invalid-feedback">Please select a valid option.</div>
+          </div>
+        </div>
+        
+        <h3>Form Utility Classes</h3>
+        <div class="card">
+          <ul>
+            <li><code>.form-control</code> - Styles text inputs, textareas, and select elements</li>
+            <li><code>.form-select</code> - Styles select dropdowns</li>
+            <li><code>.form-check</code> - Container for checkboxes and radio buttons</li>
+            <li><code>.form-check-input</code> - Styles checkbox and radio inputs</li>
+            <li><code>.form-check-label</code> - Styles labels for checkboxes and radios</li>
+            <li><code>.form-switch</code> - Creates toggle switch appearance</li>
+            <li><code>.form-label</code> - Styles form labels</li>
+            <li><code>.col-form-label</code> - Styles labels in horizontal forms</li>
+            <li><code>.is-valid</code> - Applies valid state styling</li>
+            <li><code>.is-invalid</code> - Applies invalid state styling</li>
+            <li><code>.valid-feedback</code> - Styles success messages</li>
+            <li><code>.invalid-feedback</code> - Styles error messages</li>
+          </ul>
         </div>
       </div>
 

@@ -961,7 +961,7 @@ ul.dropdown {
     display: block;
     width: auto;
     padding: var(--rem-2) var(--rem-7) var(--rem-2) var(--rem-3);
-    font-size: inherit; /* var(--font-size-base); */
+    font-size: var(--font-size-sm);
     font-weight: var(--font-weight-normal);
     line-height: 1.5;
     color: var(--color-dark);
@@ -987,6 +987,7 @@ ul.dropdown {
     opacity: 1;
 }
 
+label { float: left; }
 .form-label {
     margin-bottom: var(--rem-1);
     font-weight: var(--font-weight-medium);
