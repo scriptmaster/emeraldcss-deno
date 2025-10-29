@@ -118,6 +118,7 @@ button { border-radius: 0; }
     --rem-16: 4rem;
 
     --content-padding: var(--rem-5);
+    --content-padding-half: var(--rem-3);
     --btn-padding-y: var(--rem-almost2);
     --btn-padding-x: var(--rem-4);
     --btn-font-size: var(--font-size-sm);
@@ -175,7 +176,8 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-tight);
-    margin-bottom: var(--content-padding);
+    margin-top: var(--content-padding);
+    margin-bottom: var(--content-padding-half);
 }
 
 h1 { font-size: var(--font-size-4xl); }
@@ -197,6 +199,7 @@ a { text-decoration: none; }
 .card ol { padding-left: var(--rem-6); font-size: var(--font-size-h4); }
 .card ul li { list-style: disc; margin-bottom: var(--rem-2); }
 .card ol li { list-style: decimal; margin-bottom: var(--rem-2); }
+.card > *:first-child { margin-top: 0; }
 
 /* Text Utilities */
 .text-xs { font-size: var(--font-size-xs); }
@@ -892,6 +895,8 @@ ul.dropdown {
     font-size: var(--font-size-sm);
     border-radius: var(--radius-sm);
 }
+
+.btn-success { background-color: var(--color-success); color: var(--color-light); }
 
 .btn .icon {
     width: var(--btn-icon-size);

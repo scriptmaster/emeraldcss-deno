@@ -9,6 +9,7 @@ export default define.page(function App({ Component, state }: { Component: any; 
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>{state.title ?? "EmeraldCSS v2 - Container, Grid & Utilities"}</title>
         <link rel="stylesheet" href="/emerald-v2.css" />
+        <link rel="stylesheet" href="/index.css" />
         <link id="link-palette" rel="stylesheet" href="" />
       </head>
       <body>
