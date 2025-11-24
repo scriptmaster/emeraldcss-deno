@@ -1,0 +1,207 @@
+/* EmeraldCSS v1 - Basic Typography and Color System */
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Root Variables */
+:root {
+    /* Colors */
+    --color-primary: #0969da;
+    --color-secondary: #6f42c1;
+    --color-success: #1a7f37;
+    --color-danger: #cf222e;
+    --color-warning: #9a6700;
+    --color-info: #0969da;
+    --color-muted: #656d76;
+    --color-dark: #1f2328;
+    --color-light: #f6f8fa;
+    --color-white: #ffffff;
+    --color-border-1: #e1e4e8;
+    
+    /* Typography */
+    --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+    
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    
+    --line-height-tight: 1.25;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.75;
+    
+    /* Spacing */
+    --rem-1: 0.25rem;
+    --rem-2: 0.5rem;
+    --rem-3: 0.75rem;
+    --rem-4: 1rem;
+    --rem-5: 1.25rem;
+    --rem-6: 1.5rem;
+    --rem-7: 1.75rem;
+    --rem-8: 2rem;
+    --rem-10: 2.5rem;
+    --rem-12: 3rem;
+    --rem-14: 3.5rem;
+    --rem-16: 4rem;
+    
+    /* Border Radius */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.375rem;
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
+    
+    /* Percentages */
+    --pct-1: 8.333333%;
+    --pct-2: 16.666667%;
+    --pct-3: 25%;
+    --pct-4: 33.333333%;
+    --pct-5: 41.666667%;
+    --pct-6: 50%;
+    --pct-7: 58.333333%;
+    --pct-8: 66.666667%;
+    --pct-9: 75%;
+    --pct-10: 83.333333%;
+    --pct-11: 91.666667%;
+    --pct-12: 100%;
+}
+
+/* Base Styles */
+html {
+    font-family: var(--font-family);
+    line-height: var(--line-height-normal);
+    color: var(--color-dark);
+}
+
+body {
+    background-color: var(--color-white);
+    font-size: var(--font-size-base);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    margin-bottom: var(--rem-4);
+}
+
+h1 { font-size: var(--font-size-4xl); }
+h2 { font-size: var(--font-size-3xl); }
+h3 { font-size: var(--font-size-2xl); }
+h4 { font-size: var(--font-size-xl); }
+h5 { font-size: var(--font-size-lg); }
+h6 { font-size: var(--font-size-base); }
+
+p {
+    margin-bottom: var(--rem-4);
+    line-height: var(--line-height-normal);
+}
+
+small {
+    font-size: var(--font-size-sm);
+    color: var(--color-muted);
+}
+
+strong, b {
+    font-weight: var(--font-weight-bold);
+}
+
+em, i {
+    font-style: italic;
+}
+
+/* Text Utilities */
+.text-xs { font-size: var(--font-size-xs); }
+.text-sm { font-size: var(--font-size-sm); }
+.text-base { font-size: var(--font-size-base); }
+.text-lg { font-size: var(--font-size-lg); }
+.text-xl { font-size: var(--font-size-xl); }
+.text-2xl { font-size: var(--font-size-2xl); }
+.text-3xl { font-size: var(--font-size-3xl); }
+.text-4xl { font-size: var(--font-size-4xl); }
+
+.font-normal { font-weight: var(--font-weight-normal); }
+.font-medium { font-weight: var(--font-weight-medium); }
+.font-semibold { font-weight: var(--font-weight-semibold); }
+.font-bold { font-weight: var(--font-weight-bold); }
+
+.text-muted { color: var(--color-muted); }
+
+/* Color Utilities */
+.text-primary { color: var(--color-primary); }
+.text-secondary { color: var(--color-secondary); }
+.text-success { color: var(--color-success); }
+.text-danger { color: var(--color-danger); }
+.text-warning { color: var(--color-warning); }
+.text-info { color: var(--color-info); }
+.text-muted { color: var(--color-muted); }
+.text-dark { color: var(--color-dark); }
+
+.bg-primary { background-color: var(--color-primary); }
+.bg-secondary { background-color: var(--color-secondary); }
+.bg-success { background-color: var(--color-success); }
+.bg-danger { background-color: var(--color-danger); }
+.bg-warning { background-color: var(--color-warning); }
+.bg-info { background-color: var(--color-info); }
+.bg-muted { background-color: var(--color-muted); }
+.bg-light { background-color: var(--color-light); }
+.bg-white { background-color: var(--color-white); }
+
+/* Layout Utilities */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--rem-4);
+}
+
+.content {
+    padding: var(--rem-8) 0;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.gap-1 { gap: var(--rem-1); }
+.gap-2 { gap: var(--rem-2); }
+.gap-3 { gap: var(--rem-3); }
+.gap-4 { gap: var(--rem-4); }
+.gap-6 { gap: var(--rem-6); }
+.gap-8 { gap: var(--rem-8); }
+
+/* Cards */
+.card {
+    border: 1px solid var(--color-border-1);
+    border-radius: var(--radius-lg);
+    background-color: var(--color-white);
+    padding: var(--rem-6);
+    margin-bottom: var(--rem-4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 var(--rem-2);
+    }
+    
+    h1 { font-size: var(--font-size-3xl); }
+    h2 { font-size: var(--font-size-2xl); }
+    h3 { font-size: var(--font-size-xl); }
+}
