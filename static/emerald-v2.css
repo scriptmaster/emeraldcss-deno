@@ -1150,7 +1150,7 @@ button:not(:disabled) {
 }
 
 .panel main {
-    margin: 0 30px 60px 260px;
+    margin: 8px 0px 60px 240px;
     box-sizing: border-box;
 }
 
