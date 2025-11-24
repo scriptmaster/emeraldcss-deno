@@ -1175,3 +1175,11 @@ aside .tree-view {
     width: 100%;
     overflow-y: scroll;
 }
+
+.panel .titlebar {
+    border: 1px solid #000000b3;
+}
+
+.panel .titlebar + .window-body {
+    border-top: none;
+}
