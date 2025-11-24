@@ -1155,7 +1155,7 @@ button:not(:disabled) {
 }
 
 .panel aside {
-width: 240px;
+    width: 240px;
     position: fixed;
     top: 0;
     bottom: 0;
