@@ -1149,6 +1149,10 @@ button:not(:disabled) {
     text-decoration-style: dashed;
 }
 
+.panel {
+    --font-size-base: .75rem;
+}
+
 .panel main {
     margin: 8px 0px 60px 240px;
     box-sizing: border-box;
