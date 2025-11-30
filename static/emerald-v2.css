@@ -1185,3 +1185,5 @@ aside .tree-view {
 }
 
 .overflow-auto { overflow: auto !important; }
+.overflow-hidden { overflow: auto !important; }
+.overflow-hidden .panel main { margin-right: 8px !important; }
