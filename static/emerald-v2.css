@@ -1186,4 +1186,7 @@ aside .tree-view {
 
 .overflow-auto { overflow: auto !important; }
 .overflow-hidden { overflow: auto !important; }
-.overflow-hidden .panel main { margin-right: 8px !important; }
+
+/* support vue-js panel apps */
+body:has(#app .panel main){ overflow: hidden; }
+#app .panel main { margin-right: 8px !important; }
