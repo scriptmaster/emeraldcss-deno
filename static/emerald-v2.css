@@ -424,16 +424,16 @@ a { text-decoration: none; }
 .m-4 { margin: var(--rem-4); }
 
 .mt-0 { margin-top: 0 !important; }
-.mt-1 { margin-top: var(--rem-1); }
-.mt-2 { margin-top: var(--rem-2); }
-.mt-3 { margin-top: var(--rem-3); }
-.mt-4 { margin-top: var(--rem-4); }
+.mt-1 { margin-top: var(--rem-1) !important; }
+.mt-2 { margin-top: var(--rem-2) !important; }
+.mt-3 { margin-top: var(--rem-3) !important; }
+.mt-4 { margin-top: var(--rem-4) !important; }
 
 .mb-0 { margin-bottom: 0 !important; }
-.mb-1 { margin-bottom: var(--rem-1); }
-.mb-2 { margin-bottom: var(--rem-2); }
-.mb-3 { margin-bottom: var(--rem-3); }
-.mb-4 { margin-bottom: var(--rem-4); }
+.mb-1 { margin-bottom: var(--rem-1) !important; }
+.mb-2 { margin-bottom: var(--rem-2) !important; }
+.mb-3 { margin-bottom: var(--rem-3) !important; }
+.mb-4 { margin-bottom: var(--rem-4) !important; }
 
 .mx-0 { margin-left: 0 !important; margin-right: 0 !important; }
 .mx-1 { margin-left: var(--rem-1); margin-right: var(--rem-1); }
