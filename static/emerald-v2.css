@@ -1183,3 +1183,5 @@ aside .tree-view {
 .panel .titlebar + .window-body {
     border-top: none;
 }
+
+.overflow-auto { overflow: auto !important; }
