@@ -1191,5 +1191,5 @@ aside .tree-view {
 body:has(#app .panel main){ overflow: hidden; }
 #app .panel main { margin-right: 8px !important; }
 
-#app table>tbody>tr:nth-child(odd) { background-color: #dbdfefe3; }
+#app table>tbody>tr:nth-child(even) { background-color: #dbdfefe3; }
 #app table>tbody>tr { height: 1.7rem; border-bottom: 1px solid #ccc; }
