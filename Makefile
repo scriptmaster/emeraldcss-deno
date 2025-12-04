@@ -1,5 +1,7 @@
-push-emerald:
-	cd repos/emeraldcss-deno/ && 
+all: push
+
+push:
+	# cd repos/emeraldcss-deno/ && 
 	git add .
 	git commit -am "Emerald CSS v2"
 	git push
